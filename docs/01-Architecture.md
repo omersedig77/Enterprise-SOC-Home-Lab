@@ -34,7 +34,7 @@ Responsibilities:
 
 - Support incident investigations.
 
-#### Windows Endpoint
+#### 2. Windows Endpoint
 Operating System: Windows 10
 
 Role: Monitored endpoint
@@ -45,7 +45,7 @@ Windows Event Logs
 Splunk Universal Forwarder
 This system is used to simulate attacks against Windows and validate custom detections.
 
-#### Linux Endpoint
+#### 3. Linux Endpoint
 Operating System: Ubuntu Desktop
 
 Role: Monitored endpoint
@@ -56,7 +56,7 @@ Linux system logs
 Splunk Universal Forwarder
 This machine is used to simulate attacks targeting Linux systems and validate detection logic.
 
-#### Kali Linux
+#### 4. Kali Linux
 Role: Attack simulation platform.
 
 Responsibilities:
@@ -69,7 +69,7 @@ Responsibilities:
   
 - Generate realistic security events.
 
-#### pfSense Firewall
+#### 5. pfSense Firewall
 
 Role: Network gateway and firewall.
 
