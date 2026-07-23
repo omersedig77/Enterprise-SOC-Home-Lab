@@ -80,5 +80,3 @@ This project is actively being expanded with additional detections, attack scena
 
 #### Disclaimer
 This laboratory was created exclusively for educational, research, and defensive cybersecurity purposes. All attack simulations were performed within an isolated virtual environment owned and controlled by the author. No testing was conducted against external systems or third-party infrastructure.
-
-This is intentionally focused on what the project is and why it exists. We haven't mentioned installation steps, screenshots, or individual attacks yet—those will each have their own documentation.
