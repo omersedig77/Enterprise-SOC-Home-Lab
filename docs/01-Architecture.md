@@ -87,13 +87,15 @@ Responsibilities:
 
 Windows 10
 
-   ↓
+↓
 
 Splunk Universal Forwarder
 
 ↓
 
 Splunk Enterprise
+
+
 
 
 
@@ -106,6 +108,8 @@ Splunk Universal Forwarder
 ↓
 
 Splunk Enterprise
+
+
 
 
 
