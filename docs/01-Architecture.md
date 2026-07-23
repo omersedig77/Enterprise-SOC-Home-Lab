@@ -28,17 +28,23 @@ Support incident investigations.
 
 #### Windows Endpoint
 Operating System: Windows 10
+
 Role: Monitored endpoint
+
 Log Collection:
 Windows Event Logs
+
 Splunk Universal Forwarder
 This system is used to simulate attacks against Windows and validate custom detections.
 
 #### Linux Endpoint
 Operating System: Ubuntu Desktop
+
 Role: Monitored endpoint
+
 Log Collection:
 Linux system logs
+
 Splunk Universal Forwarder
 This machine is used to simulate attacks targeting Linux systems and validate detection logic.
 
@@ -53,10 +59,11 @@ Simulate adversary behavior.
 Execute attack scenarios.
 Test detection rules.
 Generate realistic security events.
-pfSense Firewall
-Role:
 
-#### Network gateway and firewall.
+#### pfSense Firewall
+
+Role:
+Network gateway and firewall.
 
 Responsibilities:
 
@@ -64,6 +71,7 @@ Route traffic between virtual machines.
 Monitor network connections.
 Forward firewall logs to Splunk Enterprise.
 Provide additional network visibility during investigations.
+
 Log Flow
 Windows 10
 ↓
