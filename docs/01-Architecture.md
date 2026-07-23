@@ -78,12 +78,16 @@ Network gateway and firewall.
 
 Responsibilities:
 
-Route traffic between virtual machines.
-Monitor network connections.
-Forward firewall logs to Splunk Enterprise.
-Provide additional network visibility during investigations.
+- Route traffic between virtual machines.
+  
+- Monitor network connections.
 
-Log Flow
+- Forward firewall logs to Splunk Enterprise.
+
+- Provide additional network visibility during investigations.
+
+#### Log Flow
+
 Windows 10
 ↓
 Splunk Universal Forwarder
