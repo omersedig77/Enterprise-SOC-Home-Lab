@@ -57,9 +57,7 @@ Splunk Universal Forwarder
 This machine is used to simulate attacks targeting Linux systems and validate detection logic.
 
 #### Kali Linux
-Role:
-
-Attack simulation platform.
+Role: Attack simulation platform.
 
 Responsibilities:
 
@@ -73,8 +71,7 @@ Responsibilities:
 
 #### pfSense Firewall
 
-Role:
-Network gateway and firewall.
+Role: Network gateway and firewall.
 
 Responsibilities:
 
