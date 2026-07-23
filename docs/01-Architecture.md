@@ -87,7 +87,7 @@ Responsibilities:
 
 Windows 10
 
-↓
+   ↓
 
 Splunk Universal Forwarder
 
