@@ -18,13 +18,15 @@ The architecture provides a realistic environment for validating security detect
 Splunk Enterprise Server
 Operating System: Ubuntu Desktop
 Role: Centralized Security Information and Event Management (SIEM)
+
 Responsibilities:
 Collect logs from all monitored systems.
 Index and search security events.
 Generate alerts.
 Display dashboards.
 Support incident investigations.
-Windows Endpoint
+
+#### Windows Endpoint
 Operating System: Windows 10
 Role: Monitored endpoint
 Log Collection:
@@ -32,7 +34,7 @@ Windows Event Logs
 Splunk Universal Forwarder
 This system is used to simulate attacks against Windows and validate custom detections.
 
-Linux Endpoint
+#### Linux Endpoint
 Operating System: Ubuntu Desktop
 Role: Monitored endpoint
 Log Collection:
@@ -40,7 +42,7 @@ Linux system logs
 Splunk Universal Forwarder
 This machine is used to simulate attacks targeting Linux systems and validate detection logic.
 
-Kali Linux
+#### Kali Linux
 Role:
 
 Attack simulation platform.
@@ -54,7 +56,7 @@ Generate realistic security events.
 pfSense Firewall
 Role:
 
-Network gateway and firewall.
+#### Network gateway and firewall.
 
 Responsibilities:
 
