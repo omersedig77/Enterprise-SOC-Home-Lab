@@ -16,20 +16,22 @@ The architecture provides a realistic environment for validating security detect
 
 ### Components
 Splunk Enterprise Server
+
 Operating System: Ubuntu Desktop
+
 Role: Centralized Security Information and Event Management (SIEM)
 
 Responsibilities:
 
-Collect logs from all monitored systems.
+- Collect logs from all monitored systems.
 
-Index and search security events.
+- Index and search security events.
 
-Generate alerts.
+- Generate alerts.
 
-Display dashboards.
+- Display dashboards.
 
-Support incident investigations.
+- Support incident investigations.
 
 #### Windows Endpoint
 Operating System: Windows 10
@@ -60,10 +62,13 @@ Attack simulation platform.
 
 Responsibilities:
 
-Simulate adversary behavior.
-Execute attack scenarios.
-Test detection rules.
-Generate realistic security events.
+- Simulate adversary behavior.
+  
+- Execute attack scenarios.
+  
+- Test detection rules.
+  
+- Generate realistic security events.
 
 #### pfSense Firewall
 
