@@ -14,7 +14,7 @@ All virtual machines communicate through a pfSense firewall, which serves as the
 
 The architecture provides a realistic environment for validating security detections, testing attack scenarios, and developing SOC analyst skills.
 
-Components
+### Components
 Splunk Enterprise Server
 Operating System: Ubuntu Desktop
 Role: Centralized Security Information and Event Management (SIEM)
