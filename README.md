@@ -1,6 +1,6 @@
-#SOC Homelab: Building and Operating a Security Operations Center with Splunk Enterprise
+# SOC Homelab: Building and Operating a Security Operations Center with Splunk Enterprise
 
-##Project Overview
+## Project Overview
 
 This project documents the design, implementation, and operation of a Security Operations Center (SOC) home lab built to simulate an enterprise security monitoring environment. The lab provides hands-on experience with Security Information and Event Management (SIEM), detection engineering, threat simulation, alerting, dashboard development, and incident investigation across both Windows and Linux systems.
 
