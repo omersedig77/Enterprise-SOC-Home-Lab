@@ -20,10 +20,15 @@ Operating System: Ubuntu Desktop
 Role: Centralized Security Information and Event Management (SIEM)
 
 Responsibilities:
+
 Collect logs from all monitored systems.
+
 Index and search security events.
+
 Generate alerts.
+
 Display dashboards.
+
 Support incident investigations.
 
 #### Windows Endpoint
