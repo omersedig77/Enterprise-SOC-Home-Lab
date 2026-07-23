@@ -6,7 +6,7 @@ The following diagram illustrates the overall SOC homelab architecture, includin
 ![SOC Homelab Architecture](../diagrams/soc-homelab-architecture.png)
 
 
-Overview
+## Overview
 
 The SOC Homelab was designed to simulate a small enterprise network where multiple systems generate security telemetry that is centrally collected and analyzed by Splunk Enterprise. The environment includes Windows and Linux endpoints, a firewall responsible for routing network traffic, and an attacker machine used to simulate real-world cyber attacks.
 
