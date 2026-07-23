@@ -95,6 +95,8 @@ Splunk Universal Forwarder
 
 Splunk Enterprise
 
+
+
 Ubuntu Desktop
 
 ↓
@@ -104,6 +106,8 @@ Splunk Universal Forwarder
 ↓
 
 Splunk Enterprise
+
+
 
 pfSense Firewall
 
