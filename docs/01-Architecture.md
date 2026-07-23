@@ -17,6 +17,7 @@ The architecture provides a realistic environment for validating security detect
 ### Components
 Splunk Enterprise Server
 
+
 Operating System: Ubuntu Desktop
 
 Role: Centralized Security Information and Event Management (SIEM)
