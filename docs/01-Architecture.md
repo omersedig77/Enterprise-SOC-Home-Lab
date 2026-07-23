@@ -1,5 +1,5 @@
-## Architecture Overview
-# Network Architecture
+# Architecture Overview
+## Network Architecture
 
 The following diagram illustrates the overall SOC homelab architecture, including the network topology, monitored endpoints, centralized SIEM deployment, firewall, and adversary simulation host.
 
