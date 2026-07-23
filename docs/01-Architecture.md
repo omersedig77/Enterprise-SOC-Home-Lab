@@ -86,25 +86,31 @@ Responsibilities:
 #### Log Flow
 
 Windows 10
+
 ↓
 
 Splunk Universal Forwarder
+
 ↓
 
 Splunk Enterprise
 
 Ubuntu Desktop
+
 ↓
 
 Splunk Universal Forwarder
+
 ↓
 
 Splunk Enterprise
 
 pfSense Firewall
+
 ↓
 
 Syslog
+
 ↓
 
 Splunk Enterprise
