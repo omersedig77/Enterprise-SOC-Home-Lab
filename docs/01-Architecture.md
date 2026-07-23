@@ -87,20 +87,26 @@ Responsibilities:
 
 Windows 10
 ↓
+
 Splunk Universal Forwarder
 ↓
+
 Splunk Enterprise
 
 Ubuntu Desktop
 ↓
+
 Splunk Universal Forwarder
 ↓
+
 Splunk Enterprise
 
 pfSense Firewall
 ↓
+
 Syslog
 ↓
+
 Splunk Enterprise
 
 All collected telemetry is indexed within Splunk Enterprise, where custom SPL detections, alerts, and dashboards provide centralized security monitoring.
