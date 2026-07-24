@@ -63,10 +63,10 @@ GoPhish Records User Actions
 Sysmon Network Events Generated
           │
           ▼
-Splunk Detection
+  Splunk Detection
           │
           ▼
-SOC Investigation
+  SOC Investigation
 ```
 
 ---
