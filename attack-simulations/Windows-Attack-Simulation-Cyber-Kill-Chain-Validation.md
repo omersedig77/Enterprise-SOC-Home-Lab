@@ -372,3 +372,15 @@ Outbound communication was successfully observed and correlated using endpoint t
 This simulation successfully validated the custom detections developed for the SOC Homelab by exercising multiple stages of the Cyber Kill Chain. Telemetry from Windows Event Logs, Sysmon, and the pfSense firewall was collected, correlated, and analyzed within Splunk Enterprise.
 
 The exercise demonstrated how endpoint and network visibility can be combined to detect attacker activity, generate actionable alerts, and support SOC analyst investigations from initial reconnaissance through post-exploitation.
+
+
+## Evidence
+
+The following artifacts are included with this simulation:
+
+- Screenshots of each attack stage
+- SPL search results
+- Triggered Splunk alerts
+- Dashboard visualizations
+- Terminal output from the attacker
+- Screen recording of the complete attack simulation
