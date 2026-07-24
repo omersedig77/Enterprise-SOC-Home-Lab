@@ -53,8 +53,10 @@ The primary objective of this project is not only to deploy a SIEM solution, but
 ---
 
 🔄 Project Status
+
 [!NOTE]
 This project is actively being expanded. Upcoming updates include additional detection rules, expanded attack scenarios, custom dashboard layouts, detailed screenshots, and technical walkthrough videos.
 
 ⚠️ Disclaimer
+
 This laboratory was created exclusively for educational, research, and defensive cybersecurity purposes. All attack simulations were performed within an isolated virtual environment owned and controlled by the author. No testing was conducted against external systems, unauthorized networks, or third-party infrastructure.
