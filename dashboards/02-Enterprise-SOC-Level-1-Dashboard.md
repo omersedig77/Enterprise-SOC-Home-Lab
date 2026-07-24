@@ -214,7 +214,7 @@ Detection Alerts
 SOC Analyst Review
         |
         ↓
-Investigation
+  Investigation
 ```
 
 ---
