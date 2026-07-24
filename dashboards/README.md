@@ -79,7 +79,7 @@ Security Events
 Detection Rules
        |
        ↓
-Alerts
+    Alerts
        |
        ↓
 Incident Queue
