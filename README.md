@@ -54,7 +54,7 @@ The primary objective of this project is not only to deploy a SIEM solution, but
 
 🔄 Project Status
 
-[!NOTE]
+[NOTE]
 This project is actively being expanded. Upcoming updates include additional detection rules, expanded attack scenarios, custom dashboard layouts, detailed screenshots, and technical walkthrough videos.
 
 ⚠️ Disclaimer
