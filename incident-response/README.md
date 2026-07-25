@@ -22,7 +22,7 @@ All incidents documented in this folder were generated through controlled attack
 # Incident Response Methodology
 
 The investigation process follows the standard incident response lifecycle:
-
+```
 Detection
 |
 ↓
@@ -53,6 +53,7 @@ Recovery Recommendation
 
 Lessons Learned
 
+```
 
 ---
 
