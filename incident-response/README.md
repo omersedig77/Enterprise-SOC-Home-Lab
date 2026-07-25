@@ -2,7 +2,7 @@
 
 ## Overview
 
-This section documents incident investigations performed within the SOC Homelab environment.
+This section documents incident investigations performed within the SOC Home-Lab environment.
 
 The objective is to demonstrate the complete SOC analyst workflow:
 
