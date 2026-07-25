@@ -26,24 +26,31 @@ The investigation process follows the standard incident response lifecycle:
 Detection
 |
 ↓
+
 Alert Triage
 |
 ↓
+
 Investigation
 |
 ↓
+
 Impact Assessment
 |
 ↓
+
 Containment Recommendation
 |
 ↓
+
 Eradication Recommendation
 |
 ↓
+
 Recovery Recommendation
 |
 ↓
+
 Lessons Learned
 
 
