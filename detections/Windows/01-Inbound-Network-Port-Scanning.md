@@ -158,16 +158,16 @@ Whether exploitation followed reconnaissance
 Review:
 
 ##### Windows:
-
+```
 Event ID 4624 successful logons
 Event ID 4625 failed logons
 Sysmon process creation events
-
+```
 ##### Firewall:
-
+```
 Allowed connections
 Blocked connections
-
+```
 #### 4. Determine Attack Progression
 Check if reconnaissance was followed by:
 
@@ -184,13 +184,13 @@ Asset discovery systems
 Security assessment activities
 The source IP should always be validated before escalation.
 
-Validation
+#### Validation
 This detection was validated during the Windows Attack Simulation.
 
-Attack technique:
-
+## Attack technique:
+```
 T1595 - Active Scanning
-
+```
 
 Testing:
 ```
@@ -207,38 +207,21 @@ Testing:
 ```
 
 Result:
-
+```
 Detection Triggered Successfully
+```
 
-Related Playbooks
+## Related Playbooks
 Related incident response procedures:
-
+```
 incident-response/playbooks/network-reconnaissance.md
 incident-response/playbooks/firewall-investigation.md
+```
 
-Lessons Learned
+## Lessons Learned
 This detection demonstrates the importance of monitoring reconnaissance activity before exploitation occurs.
 
 Early identification of scanning behavior allows SOC analysts to investigate attacker activity before credential attacks, exploitation attempts, or persistence mechanisms are deployed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
