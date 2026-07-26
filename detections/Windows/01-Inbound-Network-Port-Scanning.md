@@ -79,16 +79,21 @@ Splunk Universal Forwarder
 wineventlog
 
 ## SPL Detection
-<font color="red">
 index=wineventlog EventCode=5156
+
 | stats min(_time) as start_raw max(_time) as end_raw dc(Source_Port) as unique_ports count by Source_Address, Destination_Address
+
 | eval "Scan Duration (Sec)" = end_raw - start_raw
+
 | eval scan_start=strftime(start_raw, "%Y-%m-%d %H:%M:%S")
+
 | eval scan_end=strftime(end_raw, "%Y-%m-%d %H:%M:%S")
+
 | where unique_ports > 30
+
 | rename Source_Address as "Attacker IP", Destination_Address as "Victim IP", unique_ports as "Total Ports Hit"
+
 | table "Attacker IP", "Victim IP", scan_start, scan_end, "Scan Duration (Sec)", "Total Ports Hit"
-</font>
 
 #### Detection Logic Explanation
 The detection works by:
