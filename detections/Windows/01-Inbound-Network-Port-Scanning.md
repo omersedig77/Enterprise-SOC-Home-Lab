@@ -44,14 +44,16 @@ During testing, the attacker performed a full TCP port scan against the Windows 
 
 Attacker:
 
+```
 Kali Linux
 192.168.50.40
-
+```
 
 Target:
-
+```
 Windows 10
 192.168.50.20
+```
 
 Example attack command:
 
@@ -64,19 +66,23 @@ The scan generated multiple Windows Filtering Platform events which were collect
 
 Windows Event Log:
 
+```
 EventCode=5156
-
+```
 Event 5156 records allowed network connections through the Windows Filtering Platform.
 
 ### Collected through:
-
+```
 Splunk Universal Forwarder
         |
         |
   Splunk Enterprise
+```
 
 ### Index:
+```
 wineventlog
+```
 
 ## SPL Detection
 ```
@@ -114,8 +120,9 @@ A high number of unique ports accessed within a short timeframe is characteristi
 
 #### Alert Configuration
 Severity
+```
 Medium
-
+```
 
 #### Trigger Condition
 The alert triggers when an internal or external IP address communicates with more than 30 unique ports against a Windows host.
@@ -123,8 +130,9 @@ The alert triggers when an internal or external IP address communicates with mor
 This behavior indicates possible active reconnaissance or port sweep activity.
 
 #### Schedule
+```
 Every 5 minutes
-
+```
 ### Investigation Guidance
 When this alert triggers, analysts should investigate:
 
