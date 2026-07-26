@@ -7,9 +7,9 @@ Alert triage is the initial process of evaluating security alerts to determine t
 The goal is to quickly identify high-priority incidents while reducing time spent on false positives.
 
 ---
-```
-## Triage Workflow
 
+## Triage Workflow
+```
 Alert Generated
 
 ↓
