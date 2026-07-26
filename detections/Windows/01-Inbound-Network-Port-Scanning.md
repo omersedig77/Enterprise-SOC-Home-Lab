@@ -71,11 +71,9 @@ Event 5156 records allowed network connections through the Windows Filtering Pla
 ### Collected through:
 
 Splunk Universal Forwarder
-
         |
         |
-        
- Splunk Enterprise
+  Splunk Enterprise
 
 ### Index:
 wineventlog
