@@ -12,27 +12,27 @@ The goal is to quickly identify high-priority incidents while reducing time spen
 ```
 Alert Generated
 
-↓
+      ↓
 
 Validate Alert
 
-↓
+      ↓
 
 Identify Affected Asset
 
-↓
+      ↓
 
 Review Related Events
 
-↓
+      ↓
 
 Determine Severity
 
-↓
+      ↓
 
-Investigate
+ Investigate
 
-↓
+      ↓
 
 Escalate or Close
 ```
