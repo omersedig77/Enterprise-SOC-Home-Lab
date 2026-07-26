@@ -60,12 +60,15 @@ sudo nmap -sS -sV -O -p- 192.168.50.20
 ```
 The scan generated multiple Windows Filtering Platform events which were collected by Splunk.
 
-Data Source
+#### Data Source
+
 Windows Event Log:
+
 EventCode=5156
+
 Event 5156 records allowed network connections through the Windows Filtering Platform.
 
-Collected through:
+#### Collected through:
 
 Splunk Universal Forwarder
         |
