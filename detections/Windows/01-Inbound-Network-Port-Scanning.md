@@ -60,7 +60,7 @@ sudo nmap -sS -sV -O -p- 192.168.50.20
 ```
 The scan generated multiple Windows Filtering Platform events which were collected by Splunk.
 
-### Data Source
+#### Data Source
 
 Windows Event Log:
 
@@ -68,17 +68,17 @@ EventCode=5156
 
 Event 5156 records allowed network connections through the Windows Filtering Platform.
 
-### Collected through:
+#### Collected through:
 
 Splunk Universal Forwarder
         |
         |
 Splunk Enterprise
 
-### Index:
+#### Index:
 wineventlog
 
-##SPL Detection
+## SPL Detection
 
 index=wineventlog EventCode=5156
 | stats min(_time) as start_raw max(_time) as end_raw dc(Source_Port) as unique_ports count by Source_Address, Destination_Address
@@ -89,12 +89,12 @@ index=wineventlog EventCode=5156
 | rename Source_Address as "Attacker IP", Destination_Address as "Victim IP", unique_ports as "Total Ports Hit"
 | table "Attacker IP", "Victim IP", scan_start, scan_end, "Scan Duration (Sec)", "Total Ports Hit"
 
-### Detection Logic Explanation
+#### Detection Logic Explanation
 The detection works by:
 
 Searching Windows Filtering Platform connection events.
 
-### Grouping events by:
+#### Grouping events by:
 
 Source IP
 Destination IP
@@ -104,17 +104,17 @@ Identifying hosts that communicate across more than 30 unique ports.
 
 A high number of unique ports accessed within a short timeframe is characteristic of automated reconnaissance tools such as Nmap.
 
-### Alert Configuration
+#### Alert Configuration
 Severity
 Medium
 
 
-### Trigger Condition
+#### Trigger Condition
 The alert triggers when an internal or external IP address communicates with more than 30 unique ports against a Windows host.
 
 This behavior indicates possible active reconnaissance or port sweep activity.
 
-### Schedule
+#### Schedule
 Every 5 minutes
 
 ### Investigation Guidance
