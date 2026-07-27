@@ -300,27 +300,27 @@ It uses tickets instead of sending passwords over the network.
 Authentication flow:
 
 ```
-User Login
+   User Login
 
-      |
+       |
 
 Authentication Request
 
-      |
+       |
 
-Domain Controller
+ Domain Controller
 
-      |
+       |
 
 Ticket Granting Ticket (TGT)
 
-      |
+       |
 
-Service Ticket
+ Service Ticket
+ 
+       |
 
-      |
-
-Access Resource
+ Access Resource
 ```
 
 ---
