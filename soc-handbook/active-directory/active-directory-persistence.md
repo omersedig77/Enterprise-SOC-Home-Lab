@@ -43,7 +43,7 @@ Privilege Escalation
 
        |
 
-Persistence
+  Persistence
 
        |
 
@@ -51,7 +51,7 @@ Lateral Movement
 
        |
 
-Data Access
+   Data Access
 ```
 
 ---
@@ -104,15 +104,15 @@ Compromise Administrator Account
 
         |
 
-Create New User
+ Create New User
 
         |
 
-Add Privileges
+  Add Privileges
 
         |
 
-Maintain Access
+ Maintain Access
 ```
 
 ---
@@ -289,15 +289,15 @@ Compromise Domain Controller
 
           |
 
-Extract KRBTGT Hash
+ Extract KRBTGT Hash
 
           |
 
-Create Fake TGT
+  Create Fake TGT
 
           |
 
-Authenticate As Any User
+ Authenticate As Any User
 ```
 
 ---
@@ -375,7 +375,7 @@ Create Fake Service Ticket
 
         |
 
-Access Service
+  Access Service
 ```
 
 ---
@@ -439,7 +439,7 @@ Administrators
 Attackers modify AdminSDHolder permissions:
 
 ```
-AdminSDHolder
+  AdminSDHolder
 
         |
 
@@ -535,7 +535,7 @@ Compromise Account
 
         |
 
-Modify GPO
+   Modify GPO
 
         |
 
@@ -665,7 +665,7 @@ Attackers create malicious services.
 # Attack Flow
 
 ```
-Create Service
+ Create Service
 
        |
 
@@ -673,11 +673,11 @@ Configure Malware Path
 
        |
 
-Restart System
+ Restart System
 
        |
 
-Malware Executes
+ Malware Executes
 ```
 
 ---
