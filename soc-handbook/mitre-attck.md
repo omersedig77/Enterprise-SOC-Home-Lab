@@ -7,21 +7,6 @@ Rather than focusing on malware families, MITRE ATT&CK categorizes attacker beha
 Many SIEM detections, EDR products, and threat intelligence reports map directly to MITRE ATT&CK techniques.
 
 
-Common techniques demonstrated within this project include:
-
-| Technique | ID |
-|----------|------|
-| Active Scanning | T1595 |
-| Brute Force | T1110 |
-| Ingress Tool Transfer | T1105 |
-| Command and Scripting Interpreter | T1059 |
-| Registry Run Keys | T1547.001 |
-| Cron | T1053.003 |
-| Unquoted Service Path | T1574.009 |
-| LSASS Memory | T1003.001 |
-| Exfiltration Over C2 | T1041 |
-
-
 # Why MITRE ATT&CK Matters
 
 SOC analysts use MITRE ATT&CK to:
