@@ -1,6 +1,10 @@
 # MITRE ATT&CK
 
-MITRE ATT&CK provides a standardized framework for describing adversary behavior.
+MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) is a knowledge base that documents how real-world adversaries operate after gaining access to a system.
+
+Rather than focusing on malware families, MITRE ATT&CK categorizes attacker behaviors into tactics and techniques. Security Operations Centers (SOCs) use this framework to develop detections, investigate incidents, perform threat hunting, and measure detection coverage.
+
+Many SIEM detections, EDR products, and threat intelligence reports map directly to MITRE ATT&CK techniques.
 
 Common techniques demonstrated within this project include:
 
@@ -16,18 +20,6 @@ Common techniques demonstrated within this project include:
 | LSASS Memory | T1003.001 |
 | Exfiltration Over C2 | T1041 |
 
-
-# MITRE ATT&CK Cheat Sheet
-
-## Overview
-
-MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) is a knowledge base that documents how real-world adversaries operate after gaining access to a system.
-
-Rather than focusing on malware families, MITRE ATT&CK categorizes attacker behaviors into tactics and techniques. Security Operations Centers (SOCs) use this framework to develop detections, investigate incidents, perform threat hunting, and measure detection coverage.
-
-Many SIEM detections, EDR products, and threat intelligence reports map directly to MITRE ATT&CK techniques.
-
----
 
 # Why MITRE ATT&CK Matters
 
