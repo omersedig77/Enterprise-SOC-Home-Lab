@@ -38,7 +38,7 @@ Eradication
 
      |
 
-Recovery
+ Recovery
 
      |
 
