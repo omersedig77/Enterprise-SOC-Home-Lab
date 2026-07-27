@@ -418,7 +418,7 @@ Attackers attempt to obtain higher privileges.
 Examples:
 
 ```
-User Account
+ User Account
 
        |
 
@@ -426,7 +426,7 @@ Local Administrator
 
        |
 
-Domain Admin
+  Domain Admin
 ```
 
 ---
@@ -462,23 +462,23 @@ Attackers maintain access through:
 Typical attacker workflow:
 
 ```
-Reconnaissance
+ Reconnaissance
 
         |
 
-Initial Access
+ Initial Access
 
         |
 
-Credential Theft
+ Credential Theft
 
         |
 
-Privilege Escalation
+ Privilege Escalation
 
         |
 
-Lateral Movement
+ Lateral Movement
 
         |
 
@@ -486,7 +486,7 @@ Domain Compromise
 
         |
 
-Persistence
+   Persistence
 ```
 
 ---
