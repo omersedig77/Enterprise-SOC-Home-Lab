@@ -6,6 +6,7 @@ Rather than focusing on malware families, MITRE ATT&CK categorizes attacker beha
 
 Many SIEM detections, EDR products, and threat intelligence reports map directly to MITRE ATT&CK techniques.
 
+
 Common techniques demonstrated within this project include:
 
 | Technique | ID |
