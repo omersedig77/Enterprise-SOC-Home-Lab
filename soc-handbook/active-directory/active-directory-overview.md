@@ -47,7 +47,7 @@ A typical enterprise Active Directory environment contains:
 
         |                  |                 |
 
- Employees             Servers          Permissions
+   Employees             Servers          Permissions
 ```
 
 The Domain Controller acts as the central authority for authentication and authorization.
