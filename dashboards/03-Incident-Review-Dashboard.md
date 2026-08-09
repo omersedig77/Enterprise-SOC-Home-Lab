@@ -225,14 +225,3 @@ It simulates the operational side of a SOC by connecting:
 - Analyst workflow
 - Incident investigation
 
----
-
-# Screenshots
-
-To be added:
-
-- Full incident review dashboard
-- Incident severity panels
-- Incident queue table
-- Analyst workload visualization
-- Detection rule distribution
