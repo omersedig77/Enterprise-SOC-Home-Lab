@@ -1,5 +1,8 @@
 # Incident Investigation Dashboard
 
+<img width="1821" height="2281" alt="image" src="https://github.com/user-attachments/assets/c3cb703e-ec1a-4e68-b1e6-3ed23c4be847" />
+
+
 ## Overview
 
 The Incident Investigation Dashboard simulates a SOC analyst investigation workspace used after an incident has been selected from the incident queue.
