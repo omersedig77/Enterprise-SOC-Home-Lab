@@ -272,16 +272,3 @@ It combines:
 - Response planning
 
 The dashboard simulates how analysts investigate security incidents after an alert has been generated.
-
----
-
-# Screenshots
-
-To be added:
-
-- Incident ID filter
-- Incident summary panels
-- Related events table
-- MITRE ATT&CK mapping
-- Raw event investigation
-- Recommended response section
