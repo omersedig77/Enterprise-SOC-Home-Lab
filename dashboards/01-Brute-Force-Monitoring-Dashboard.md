@@ -78,6 +78,8 @@ The dashboard provides interactive filtering capabilities.
 
 Allows analysts to investigate authentication activity during a specific timeframe.
 
+![Uploading Screenshot 2026-08-10 002920.png…]()
+
 ---
 
 ## Protocol
