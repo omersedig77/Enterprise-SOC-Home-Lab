@@ -93,6 +93,8 @@ Available protocols:
 - RDP
 - SSH
 
+<img width="1917" height="1078" alt="Screenshot 2026-08-10 002441" src="https://github.com/user-attachments/assets/095860b3-63c4-47c6-b905-cf1546c5f3a8" />
+
 ---
 
 ## Source IP
@@ -104,6 +106,8 @@ Useful for identifying:
 - Internal attackers
 - Compromised systems
 - Repeated attack sources
+
+<img width="1917" height="1078" alt="Screenshot 2026-08-10 002452" src="https://github.com/user-attachments/assets/e08a837c-ba45-4eea-ab31-3ebb0f014dcf" />
 
 ---
 
@@ -117,6 +121,8 @@ Useful for identifying:
 - Privileged accounts
 - Compromised credentials
 
+<img width="1917" height="1078" alt="Screenshot 2026-08-10 002501" src="https://github.com/user-attachments/assets/8aba0dff-9ba0-4950-bc0e-97ddf61b73e5" />
+
 ---
 
 ## Destination Host
@@ -127,6 +133,8 @@ Useful for identifying:
 
 - Targeted machines
 - Potentially compromised systems
+
+<img width="1917" height="1078" alt="Screenshot 2026-08-10 002511" src="https://github.com/user-attachments/assets/6715ffab-3011-425f-901e-a10820f96cef" />
 
 ---
 
