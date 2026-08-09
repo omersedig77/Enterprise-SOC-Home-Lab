@@ -314,13 +314,3 @@ This dashboard provides cross-platform visibility into credential-based attacks 
 By correlating failed and successful authentication events, analysts can identify attacks that would otherwise appear as isolated login failures.
 
 ---
-
-# Screenshots
-
-To be added:
-
-- Full dashboard view
-- Protocol filter selection
-- Successful login after multiple failures panel
-- Authentication event details
-- Investigation workflow example
