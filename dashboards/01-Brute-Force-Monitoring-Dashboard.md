@@ -78,7 +78,7 @@ The dashboard provides interactive filtering capabilities.
 
 Allows analysts to investigate authentication activity during a specific timeframe.
 
-![Uploading Screenshot 2026-08-10 002920.png…]()
+<img width="1917" height="1078" alt="Screenshot 2026-08-10 002920" src="https://github.com/user-attachments/assets/c30c253f-24d0-48b5-91f0-c00c8f151c51" />
 
 ---
 
