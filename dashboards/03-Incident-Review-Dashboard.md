@@ -1,5 +1,8 @@
 # Incident Review Dashboard
 
+<img width="1821" height="2384" alt="image" src="https://github.com/user-attachments/assets/0d89ccae-c67d-4bf3-94ca-1e1bfd5ae749" />
+
+
 ## Overview
 
 The Incident Review Dashboard simulates a SOC Level 1 incident queue management system.
