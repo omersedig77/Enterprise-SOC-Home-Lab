@@ -1,5 +1,7 @@
 # Brute Force Monitoring Dashboard
 
+<img width="1870" height="2068" alt="image" src="https://github.com/user-attachments/assets/b37bfae3-c4e8-4fb9-a005-4012824277d5" />
+
 ## Overview
 
 The Brute Force Monitoring Dashboard provides SOC analysts with centralized visibility into authentication attacks targeting Windows and Linux endpoints.
@@ -306,9 +308,6 @@ By correlating failed and successful authentication events, analysts can identif
 ---
 
 # Screenshots
-
-<img width="1870" height="2068" alt="image" src="https://github.com/user-attachments/assets/b37bfae3-c4e8-4fb9-a005-4012824277d5" />
-
 
 To be added:
 
