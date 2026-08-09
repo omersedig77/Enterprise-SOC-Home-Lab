@@ -308,8 +308,6 @@ By correlating failed and successful authentication events, analysts can identif
 <img width="1870" height="2068" alt="image" src="https://github.com/user-attachments/assets/b37bfae3-c4e8-4fb9-a005-4012824277d5" />
 
 
-![Uploading Screenshot 2026-08-10 002441.png…]()
-
 To be added:
 
 - Full dashboard view
