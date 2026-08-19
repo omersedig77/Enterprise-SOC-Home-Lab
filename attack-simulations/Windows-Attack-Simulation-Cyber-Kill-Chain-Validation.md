@@ -235,12 +235,15 @@ The payload was successfully delivered to the target system in preparation for e
 ### Screenshots
 
 - Payload delivery
+  
   <img width="487" height="182" alt="2 kali is hosting" src="https://github.com/user-attachments/assets/bc89f9b9-d385-4ec3-84e0-c84a20e50a2b" />
-<img width="1237" height="253" alt="4 we delivered the malware to windows" src="https://github.com/user-attachments/assets/8dc4d244-409f-46e0-a281-15d343217e07" />
-<img width="967" height="228" alt="3 kali hosting the windows downloaded the file" src="https://github.com/user-attachments/assets/ae02764e-1249-4081-873f-f5a0c45fa85a" />
+<img width="1913" height="377" alt="12 Both Windows   kali Delivery payload" src="https://github.com/user-attachments/assets/27ef7712-0c3b-4a62-b943-0dec9f6476b8" />
+
+- Triggered alert
+<img width="3345" height="267" alt="13 The delivery alert triggered" src="https://github.com/user-attachments/assets/29e935d4-2508-43eb-8e36-2ba2029a2e3c" />
 
 - Splunk detection
-- Triggered alert
+<img width="2272" height="833" alt="5 SPL detecting delivery" src="https://github.com/user-attachments/assets/5856a7ff-4e3c-44e6-bd93-77dd98dc6b82" />
 
 ---
 
