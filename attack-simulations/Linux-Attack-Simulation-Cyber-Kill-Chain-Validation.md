@@ -191,7 +191,7 @@ A reverse shell was configured using a cron job to establish persistent access.
 - I already gained root privileges 
 <img width="1703" height="682" alt="1 we already root and sudo is for all" src="https://github.com/user-attachments/assets/62bfb834-bfc6-476f-9728-21e746fd0bc3" />
 
-- Cron configuration with Reverse shell, The cron will run every 1 minute
+- Cron configuration with Reverse shell, This cron job will run every 1 minute
   <img width="1713" height="1112" alt="2" src="https://github.com/user-attachments/assets/4213f4f2-062a-437c-9ca8-7c48931b7954" />
 
   
