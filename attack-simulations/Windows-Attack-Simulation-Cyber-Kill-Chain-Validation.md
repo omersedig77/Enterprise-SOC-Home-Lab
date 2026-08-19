@@ -210,7 +210,7 @@ Listener:
 ### Screenshots
 
 - msfvenom payload generation
-- Metasploit listener configuration
+<img width="792" height="432" alt="1 Weponization creating the malware file" src="https://github.com/user-attachments/assets/8487a612-583f-4c7f-9d7b-898ede6fd129" />
 
 ---
 
