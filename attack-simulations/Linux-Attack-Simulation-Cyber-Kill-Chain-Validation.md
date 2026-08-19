@@ -156,8 +156,17 @@ Valid credentials were discovered, allowing successful SSH access.
 ### Screenshots
 
 - Hydra attack
+  <img width="1710" height="756" alt="1 Brute force using hydra" src="https://github.com/user-attachments/assets/9a7202e2-715c-478d-9ef5-b8c10bad636f" />
+
 - SSH login
+  <img width="1711" height="1340" alt="1 initial access" src="https://github.com/user-attachments/assets/8e911af0-e9a5-4fd8-a4ae-0f49470770f9" />
+
 - Splunk alerts
+<img width="3430" height="1381" alt="8 we have full picture of SOC how he detect the brute forcing" src="https://github.com/user-attachments/assets/3c8f0883-2fa7-47cb-ac72-fa054c076aca" />
+
+<img width="1842" height="760" alt="2 query" src="https://github.com/user-attachments/assets/f9214eb7-9ce3-4a9c-9546-c9c58412977f" />
+
+<img width="3437" height="1438" alt="Screenshot 2026-07-15 225034" src="https://github.com/user-attachments/assets/dd1a6833-995c-407c-a333-f628d47dceaa" />
 
 ---
 
