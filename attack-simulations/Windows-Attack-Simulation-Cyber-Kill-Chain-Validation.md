@@ -130,6 +130,7 @@ The scan identified open ports, running services, and operating system informati
 ### Screenshots
 
 - Nmap scan output
+  
   <img width="822" height="521" alt="Nmap scanning on kali using namp" src="https://github.com/user-attachments/assets/4ef4fbd5-fbad-413f-8da0-4d23e602e9f0" />
 
 - Splunk detection
