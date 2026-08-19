@@ -115,8 +115,13 @@ The scan identified open services available on the Linux host.
 ### Screenshots
 
 - Nmap output
+  <img width="1010" height="296" alt="2 nmap scanning" src="https://github.com/user-attachments/assets/681fdf41-7160-42bc-b7a0-78e9a6de2b49" />
+
 - Splunk alert
+  <img width="1836" height="372" alt="9 Alert triggerd" src="https://github.com/user-attachments/assets/ae33e810-82cc-46b9-8650-900d8e458fbe" />
+
 - Detection events
+<img width="1633" height="612" alt="10 Alert result" src="https://github.com/user-attachments/assets/21dd57ce-4a90-437f-9925-c2f724810a1a" />
 
 ---
 
