@@ -166,8 +166,6 @@ Valid credentials were discovered, allowing successful SSH access.
 
 <img width="1842" height="760" alt="2 query" src="https://github.com/user-attachments/assets/f9214eb7-9ce3-4a9c-9546-c9c58412977f" />
 
-<img width="3437" height="1438" alt="Screenshot 2026-07-15 225034" src="https://github.com/user-attachments/assets/dd1a6833-995c-407c-a333-f628d47dceaa" />
-
 ---
 
 # Stage 3 – Persistence
