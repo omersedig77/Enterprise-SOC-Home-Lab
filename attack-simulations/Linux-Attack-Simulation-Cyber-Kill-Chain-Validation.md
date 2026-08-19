@@ -188,9 +188,16 @@ A reverse shell was configured using a cron job to establish persistent access.
 
 ### Screenshots
 
-- Cron configuration
-- Reverse shell
+<img width="1703" height="682" alt="1 we already root and sudo is for all" src="https://github.com/user-attachments/assets/62bfb834-bfc6-476f-9728-21e746fd0bc3" />
+
+- Cron configuration with Reverse shell
+  <img width="1713" height="1112" alt="2" src="https://github.com/user-attachments/assets/4213f4f2-062a-437c-9ca8-7c48931b7954" />
+
+  
 - Splunk alert
+<img width="1837" height="916" alt="the cron alert is very noisy because it&#39;s running every minutes" src="https://github.com/user-attachments/assets/df065c2d-740c-4f57-a579-cb3c7e19ff31" />
+
+<img width="3438" height="1438" alt="important new detection rule" src="https://github.com/user-attachments/assets/9402b201-a04b-4e7c-b9a4-05fc4b0dd59a" />
 
 ---
 
