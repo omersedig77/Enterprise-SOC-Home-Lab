@@ -139,6 +139,8 @@ The scan identified open ports, running services, and operating system informati
 - Splunk detection
 <img width="1507" height="627" alt="Detecting Nmap using SPL query 3" src="https://github.com/user-attachments/assets/6fcfc6fc-c176-4dea-92fb-171f6855c895" />
 
+- Dashboard
+
 <img width="1827" height="1026" alt="Final Scanning Dashboard" src="https://github.com/user-attachments/assets/4d2c1146-3aea-4624-ae6d-64366905b252" />
 
 ---
