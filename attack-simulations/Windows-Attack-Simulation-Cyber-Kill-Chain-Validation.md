@@ -174,8 +174,11 @@ A valid username and password combination was identified, allowing successful Re
 ### Screenshots
 
 - Hydra attack
-- Successful RDP login
-- Splunk alert
+  <img width="1657" height="582" alt="3 RDP Brute Forcing" src="https://github.com/user-attachments/assets/35c30480-7813-4cf8-af92-75c50ccebdd2" />
+
+- Successful RDP login and the Splunk Alert
+  <img width="3362" height="1122" alt="14 Full pic of the RDP brute force and access" src="https://github.com/user-attachments/assets/588ec177-6bff-4d40-93c0-7969d6f6001e" />
+
 
 ---
 
