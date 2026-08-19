@@ -301,8 +301,13 @@ Registry Run Key modification.
 ### Screenshots
 
 - Registry modification
+  <img width="1103" height="115" alt="17 persistance powershell command" src="https://github.com/user-attachments/assets/838ba172-1cec-4fd4-87f2-e24b385435fb" />
+
 - Splunk alerts
-- Detection dashboard
+  <img width="3347" height="468" alt="23 Persistance Alerts" src="https://github.com/user-attachments/assets/f99685ea-3991-44e2-9306-6090517e7fce" />
+
+- Splunk detection
+<img width="3363" height="732" alt="24 Persistence Registry Key Modification Detected" src="https://github.com/user-attachments/assets/360632fe-963d-4054-aaa0-3e2dcf94d71c" />
 
 ---
 
