@@ -97,7 +97,7 @@ Identify exposed services on the Ubuntu endpoint.
 ### Command
 
 ```bash
-sudo nmap -sS -sV -O -p- 192.168.50.30
+sudo nmap -sT -sV -O -p- 192.168.50.30
 ```
 
 ### Result
