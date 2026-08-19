@@ -269,8 +269,13 @@ The Windows endpoint initiated an outbound connection to the Kali Linux listener
 ### Screenshots
 
 - Reverse shell session
+  <img width="877" height="1045" alt="11 we got shell from the windows machine" src="https://github.com/user-attachments/assets/4800cfda-dfa2-437f-96fe-9a6ed723562e" />
+
 - Splunk alert
-- Dashboard visualization
+  <img width="3353" height="406" alt="18 Alert is triggerd" src="https://github.com/user-attachments/assets/b577150a-e009-4a34-ac51-3abd12be9ad7" />
+
+- Splunk detection
+<img width="3113" height="563" alt="19 The search result" src="https://github.com/user-attachments/assets/0489cb11-a3cd-4522-a372-8f49632c0872" />
 
 ---
 
