@@ -40,7 +40,7 @@ The objectives of the exercise were to:
 
 ```
 
-                    Windows Attack Simulation
+                                                         Windows Attack Simulation
 
         Kali Linux (192.168.50.40)
                     │
@@ -130,8 +130,15 @@ The scan identified open ports, running services, and operating system informati
 ### Screenshots
 
 - Nmap scan output
+  <img width="822" height="521" alt="Nmap scanning on kali using namp" src="https://github.com/user-attachments/assets/4ef4fbd5-fbad-413f-8da0-4d23e602e9f0" />
+
 - Splunk detection
+<img width="1507" height="627" alt="Detecting Nmap using SPL query 3" src="https://github.com/user-attachments/assets/6fcfc6fc-c176-4dea-92fb-171f6855c895" />
+
 - Triggered alert
+<img width="1637" height="343" alt="1 The network scanning alert triggerd" src="https://github.com/user-attachments/assets/b6560e03-244d-494e-b5ba-634389bb9e19" />
+
+<img width="1827" height="1026" alt="Final Scanning Dashboard" src="https://github.com/user-attachments/assets/4d2c1146-3aea-4624-ae6d-64366905b252" />
 
 ---
 
