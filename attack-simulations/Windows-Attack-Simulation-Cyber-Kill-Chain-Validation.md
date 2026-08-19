@@ -179,6 +179,9 @@ A valid username and password combination was identified, allowing successful Re
 - Successful RDP login and the Splunk Alert
   <img width="3362" height="1122" alt="14 Full pic of the RDP brute force and access" src="https://github.com/user-attachments/assets/588ec177-6bff-4d40-93c0-7969d6f6001e" />
 
+- Splunk detection
+<img width="1500" height="792" alt="15 The Result of the SPL" src="https://github.com/user-attachments/assets/9397c671-6801-475a-b139-665e548b812d" />
+
 
 ---
 
