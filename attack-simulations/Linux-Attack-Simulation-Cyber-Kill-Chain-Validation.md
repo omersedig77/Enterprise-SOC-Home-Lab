@@ -37,7 +37,7 @@ The objectives of this exercise were to:
 # Attack Flow
 
 ```
-                Linux Attack Simulation
+                                                         Linux Attack Simulation
 
       Kali Linux (192.168.50.40)
                  │
