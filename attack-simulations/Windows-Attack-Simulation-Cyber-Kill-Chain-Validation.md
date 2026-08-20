@@ -373,15 +373,16 @@ Credential Access – LSASS Memory Dumping Behavior Detected
 <img width="3362" height="1022" alt="20 As we can see the credintial access alert triggerd" src="https://github.com/user-attachments/assets/6868cba2-a33e-4809-ad6b-fd79968bead9" />
 
 Credential Access – Mimikatz Ingress and Command Execution Correlation
+
 <img width="3362" height="972" alt="Mimikatz alert triggered" src="https://github.com/user-attachments/assets/ec69b35d-c558-4540-b951-7d6d315dd3c5" />
 
 - Splunk detection
 
-  LSASS memory dumping
+LSASS memory dumping
 
   <img width="3363" height="688" alt="21 The result of the creds access" src="https://github.com/user-attachments/assets/cd9f12fd-72a9-4f34-9066-b59d4b7c9ebe" />
 
-  Mimikatz execution
+Mimikatz execution
 
 <img width="3178" height="868" alt="The SPL query of the mimikatz" src="https://github.com/user-attachments/assets/db2f0393-c0e4-48f0-98f6-0508fc6d4e58" />
 
