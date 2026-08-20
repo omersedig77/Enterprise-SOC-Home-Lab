@@ -288,4 +288,3 @@ The following artifacts are included with this simulation:
 - Sysmon Event ID 3
 - SPL search results
 - Splunk investigation
-- Screen recording of the complete phishing simulation
