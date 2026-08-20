@@ -247,7 +247,6 @@ Using Splunk, the investigation confirmed:
 - Correlation with the phishing campaign timeline.
 
 This demonstrated that endpoint network telemetry can be used to investigate phishing activity even without a dedicated alert.
-![Uploading Screenshot 2026-06-27 204517.png…]()
 
 ---
 
