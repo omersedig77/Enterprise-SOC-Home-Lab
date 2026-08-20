@@ -361,8 +361,19 @@ Access credentials stored in LSASS memory.
 ### Screenshots
 
 - LSASS dump
+  <img width="1020" height="1161" alt="EX 3" src="https://github.com/user-attachments/assets/4037d743-8b98-4184-a9ab-ff452746638f" />
+
 - Mimikatz execution
+  <img width="950" height="1010" alt="mimikatz dump 1" src="https://github.com/user-attachments/assets/a1695d50-acd4-43fc-9d36-f15922750932" />
+
 - Splunk alerts
+<img width="3362" height="1022" alt="20 As we can see the credintial access alert triggerd" src="https://github.com/user-attachments/assets/6868cba2-a33e-4809-ad6b-fd79968bead9" />
+<img width="3362" height="972" alt="Mimikatz alert triggered" src="https://github.com/user-attachments/assets/ec69b35d-c558-4540-b951-7d6d315dd3c5" />
+
+- Splunk detection
+  <img width="3363" height="688" alt="21 The result of the creds access" src="https://github.com/user-attachments/assets/cd9f12fd-72a9-4f34-9066-b59d4b7c9ebe" />
+
+<img width="3178" height="868" alt="The SPL query of the mimikatz" src="https://github.com/user-attachments/assets/db2f0393-c0e4-48f0-98f6-0508fc6d4e58" />
 
 ---
 
