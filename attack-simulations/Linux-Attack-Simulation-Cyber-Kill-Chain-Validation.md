@@ -230,7 +230,7 @@ Examples include:
 > *Update this section with the exact techniques you simulated.*
 
 ### Screenshots
-
+https://github.com/omersedig77/Enterprise-SOC-Home-Lab/commit/7330c5c16231427b40c369b2e221e3b6283d5bda
 - Terminal activity
 - Splunk detection
 - Related events
