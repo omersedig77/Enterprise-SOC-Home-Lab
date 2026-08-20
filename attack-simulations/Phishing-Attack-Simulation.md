@@ -140,7 +140,11 @@ GoPhish immediately confirmed:
 ### Screenshots
 
 - GoPhish campaign dashboard
+  <img width="1713" height="1021" alt="27 The email have been sent to the target" src="https://github.com/user-attachments/assets/a966fe5e-a432-4b56-96b5-80e4b9f16caa" />
+
 - Email received in inbox
+  <img width="1710" height="1010" alt="28 The target recevied the email" src="https://github.com/user-attachments/assets/5319a405-3fd6-4b0a-99db-6d2da07b0afe" />
+
 
 ---
 
@@ -158,6 +162,7 @@ This demonstrates user engagement with the phishing message.
 
 - Email opened
 - GoPhish dashboard status
+<img width="3437" height="1438" alt="29 the form and the gophish showm the email have been opened and link clicked" src="https://github.com/user-attachments/assets/2f97a523-7dee-40b1-bc51-470347f2499c" />
 
 ---
 
@@ -176,6 +181,7 @@ The victim was redirected to the phishing landing page hosted on the Kali Linux 
 - Email link
 - Landing page
 - GoPhish click event
+<img width="3437" height="1438" alt="29 the form and the gophish showm the email have been opened and link clicked" src="https://github.com/user-attachments/assets/b67440a0-c863-481b-a991-63ec87dc687a" />
 
 ---
 
@@ -195,8 +201,13 @@ This stage simulates credential harvesting in a controlled environment.
 ### Screenshots
 
 - Fake Google page
+  <img width="1710" height="1332" alt="30 the victim fills the fake form" src="https://github.com/user-attachments/assets/9235d226-e3bc-4944-a479-47b57b11ecaf" />
+
 - Credential submission
+  <img width="1715" height="1017" alt="31 The Gophish show the victim have submit data using the fake form" src="https://github.com/user-attachments/assets/1eff0e4e-2ff7-4187-9a23-7bc4633d8fc8" />
+
 - GoPhish captured data
+<img width="1705" height="1277" alt="32 This is the victim informations" src="https://github.com/user-attachments/assets/7262d8b1-ed88-4b8e-a3e3-0b7372227a99" />
 
 ---
 
