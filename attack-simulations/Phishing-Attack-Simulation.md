@@ -114,7 +114,7 @@ Google Password Update
 The landing page was designed to closely resemble a legitimate Google password update page in order to simulate a realistic phishing scenario.
 <img width="1708" height="1137" alt="14 Landing page" src="https://github.com/user-attachments/assets/57794bde-163f-495b-9116-ce482ce7a3fe" />
 
-<img width="1708" height="1137" alt="14 Landing page" src="https://github.com/user-attachments/assets/4ef12e28-81e7-485e-8d64-fe3838c1f6d2" />
+<img width="1710" height="717" alt="15 landing page saved" src="https://github.com/user-attachments/assets/4fb9857f-27b1-4d1f-9dad-9eade8b7eb3a" />
 
 ---
 
