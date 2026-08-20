@@ -327,9 +327,14 @@ Obtain elevated privileges using an Unquoted Service Path vulnerability.
 
 ### Screenshots
 
-- Service configuration
-- Successful privilege escalation
+- Service configuration and Successful privilege escalation
+  <img width="1888" height="477" alt="13 The privilege Escalation full pic windows and kali" src="https://github.com/user-attachments/assets/bf7dfc3e-febc-4a72-b69c-4f2a188c60fb" />
+
 - Splunk alert
+<img width="3360" height="757" alt="14 Alert Triggerd" src="https://github.com/user-attachments/assets/06c392b0-bf0e-4cda-b43f-5faf1a375449" />
+
+- Splunk detection
+<img width="3366" height="780" alt="15 The Result" src="https://github.com/user-attachments/assets/fe93f703-987f-4ed4-a49e-416659d791d6" />
 
 ---
 
