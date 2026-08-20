@@ -99,6 +99,8 @@ Subject:
 ```
 Action Required: Your Password Has Expired
 ```
+<img width="1712" height="1327" alt="17 The new templete form" src="https://github.com/user-attachments/assets/17d0cee9-3960-4eee-9ed6-14adfaa4df41" />
+
 <img width="1707" height="720" alt="18 Templete saved" src="https://github.com/user-attachments/assets/e52f4766-cc49-4c91-9669-36139a354cd5" />
 
 ---
@@ -110,6 +112,8 @@ Google Password Update
 ```
 
 The landing page was designed to closely resemble a legitimate Google password update page in order to simulate a realistic phishing scenario.
+<img width="1708" height="1137" alt="14 Landing page" src="https://github.com/user-attachments/assets/57794bde-163f-495b-9116-ce482ce7a3fe" />
+
 <img width="1708" height="1137" alt="14 Landing page" src="https://github.com/user-attachments/assets/4ef12e28-81e7-485e-8d64-fe3838c1f6d2" />
 
 ---
@@ -117,6 +121,8 @@ The landing page was designed to closely resemble a legitimate Google password u
 ## Target User
 
 A test user was created within GoPhish using a controlled email account.
+<img width="1712" height="775" alt="20 the New user form" src="https://github.com/user-attachments/assets/366329b7-1494-47d0-abec-fcdd92cbd8ce" />
+
 <img width="1710" height="707" alt="21 The user have been added" src="https://github.com/user-attachments/assets/1c5e6915-5ece-4ac7-881e-0a88d69de111" />
 
 ---
