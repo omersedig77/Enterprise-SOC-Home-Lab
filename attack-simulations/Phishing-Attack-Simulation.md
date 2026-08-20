@@ -228,6 +228,9 @@ Relevant Event:
 - Sysmon Event ID 3 – Network Connection
 
 The outbound connection generated when the victim accessed the phishing landing page was collected by the Splunk Universal Forwarder and indexed within Splunk Enterprise.
+<img width="1852" height="1047" alt="SPL with markup" src="https://github.com/user-attachments/assets/d46968a7-158d-4484-b8c1-98f748dfcb92" />
+
+<img width="1852" height="602" alt="Screenshot 2026-06-27 204517" src="https://github.com/user-attachments/assets/95703c87-974f-48f3-af1c-6720da66c8e1" />
 
 ---
 
@@ -244,6 +247,7 @@ Using Splunk, the investigation confirmed:
 - Correlation with the phishing campaign timeline.
 
 This demonstrated that endpoint network telemetry can be used to investigate phishing activity even without a dedicated alert.
+![Uploading Screenshot 2026-06-27 204517.png…]()
 
 ---
 
