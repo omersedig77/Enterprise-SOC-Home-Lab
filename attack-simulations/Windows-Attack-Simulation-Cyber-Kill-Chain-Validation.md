@@ -406,15 +406,18 @@ The simulated malicious executable was successfully transferred to the Windows e
 - VirusTotal Integration – File/hash reputation analysis
 - Windows Endpoint – File activity
 
-Note: The EICAR test file was used as a safe substitute for a real malicious executable. It does not damage the system; in this scenario, it represents a payload intended to cause impact.
+### MITRE ATT&CK
+
+- T1105 – Ingress Tool Transfer
+
+#### | Note
+The EICAR test file was used as a safe substitute for a real malicious executable. It does not damage the system; in this scenario, it represents a payload intended to cause impact.
 
 ### Screenshots
 
-- VirusTotal API configuration
-- EICAR file detection in Splunk
-- File creation/download event
-- Splunk investigation timeline
-- Dashboard visualization
+- Splunk Alert 
+- Splunk Detection
+
 ---
 
 # Detection Summary
@@ -438,14 +441,3 @@ Note: The EICAR test file was used as a safe substitute for a real malicious exe
 This simulation successfully validated the custom detections developed for the SOC Homelab by exercising multiple stages of the Cyber Kill Chain. Telemetry from Windows Event Logs, Sysmon, and the pfSense firewall was collected, correlated, and analyzed within Splunk Enterprise.
 
 The exercise demonstrated how endpoint and network visibility can be combined to detect attacker activity, generate actionable alerts, and support SOC analyst investigations from initial reconnaissance through post-exploitation.
-
-## Evidence
-
-The following artifacts are included with this simulation:
-
-- Screenshots of each attack stage
-- SPL search results
-- Triggered Splunk alerts
-- Dashboard visualizations
-- Terminal output from the attacker
-- Screen recording of the complete attack simulation
