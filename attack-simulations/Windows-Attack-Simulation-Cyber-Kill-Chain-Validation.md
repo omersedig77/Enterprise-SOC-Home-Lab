@@ -392,33 +392,29 @@ Mimikatz execution
 
 ## Objective
 
-Demonstrate the delivery and execution of a simulated malicious executable on the compromised Windows endpoint, representing an attacker attempting to cause damage or disruption to the victim machine.
+Demonstrate the transfer of a simulated malicious executable to the compromised Windows endpoint, representing an attacker attempting to cause damage or disruption.
 
-The attacker uses the previously established reverse shell to transfer the executable to the victim. The executable is then treated as the simulated destructive payload for the purpose of the attack scenario.
+The attacker uses the previously established reverse shell to transfer the executable to the victim.
 
 ### Result
 
-The simulated malicious executable was successfully transferred to the compromised Windows endpoint through the existing reverse shell. Endpoint telemetry was collected to identify the file creation and subsequent execution activity.
-
-The activity was monitored and correlated in Splunk to demonstrate how a SOC analyst could detect a malicious payload being introduced onto a compromised endpoint and investigate its potential impact.
+The simulated malicious executable was successfully transferred to the Windows endpoint. Splunk detected the file when it was downloaded, allowing the activity to be monitored and investigated.
 
 ### Monitoring
 
-- Splunk Enterprise – Endpoint events, file creation, process execution, and investigation timeline
-- VirusTotal Integration – Malware/hash reputation and file analysis
-- Windows Endpoint – File and process activity
+- Splunk Enterprise – File creation and security events
+- VirusTotal Integration – File/hash reputation analysis
+- Windows Endpoint – File activity
 
-Note: The EICAR test file was used in this lab as a safe substitute for a real malicious executable. It does not actually damage the system. For the purposes of the attack simulation, its role represents a payload intended to cause impact to the victim machine.
+Note: The EICAR test file was used as a safe substitute for a real malicious executable. It does not damage the system; in this scenario, it represents a payload intended to cause impact.
 
 ### Screenshots
 
 - VirusTotal API configuration
-- Malicious/simulated file detection in Splunk
-- File creation event
-- Process execution event
+- EICAR file detection in Splunk
+- File creation/download event
 - Splunk investigation timeline
 - Dashboard visualization
-
 ---
 
 # Detection Summary
