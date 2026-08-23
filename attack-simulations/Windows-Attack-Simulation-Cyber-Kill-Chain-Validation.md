@@ -95,7 +95,7 @@ The objectives of the exercise were to:
 | Privilege Escalation | Unquoted Service Path | ✅ Privilege Escalation – Unquoted Service Path Reverse Shell Verified |
 | Credential Access | LSASS Memory Dump | ✅ Credential Access – LSASS Memory Dumping Behavior Detected |
 | Credential Access | Mimikatz Execution | ✅ Credential Access – Mimikatz Ingress and Command Execution Correlation |
-| Impact | Download EICAR file | Splunk detects file creation and execution |
+| Impact | Download EICAR file | Splunk detects the malicious file on the endpoint |
 
 ---
 
