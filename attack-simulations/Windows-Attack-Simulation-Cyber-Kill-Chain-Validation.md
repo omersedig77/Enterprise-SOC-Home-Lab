@@ -415,8 +415,14 @@ The EICAR test file was used as a safe substitute for a real malicious executabl
 
 ### Screenshots
 
-- Splunk Alert 
+- Downloading the malware file on the windows system through the reverse shell
+  <img width="1898" height="1018" alt="9 downloading the malware file on the windows system" src="https://github.com/user-attachments/assets/0241f65b-507f-461d-9f26-b317724f1169" />
+
+- Splunk Alert
+  <img width="2316" height="1013" alt="13 Alert triggred there is malware" src="https://github.com/user-attachments/assets/46563d82-7e84-472b-94f8-351a3f203b75" />
+
 - Splunk Detection
+<img width="3182" height="742" alt="10 the malware query" src="https://github.com/user-attachments/assets/ae175042-acea-4c2d-9690-177ab363f91e" />
 
 ---
 
