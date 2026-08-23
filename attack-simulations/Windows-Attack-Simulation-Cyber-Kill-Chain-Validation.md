@@ -95,7 +95,7 @@ The objectives of the exercise were to:
 | Privilege Escalation | Unquoted Service Path | ✅ Privilege Escalation – Unquoted Service Path Reverse Shell Verified |
 | Credential Access | LSASS Memory Dump | ✅ Credential Access – LSASS Memory Dumping Behavior Detected |
 | Credential Access | Mimikatz Execution | ✅ Credential Access – Mimikatz Ingress and Command Execution Correlation |
-| Exfiltration | Outbound Communication | Monitored through Splunk telemetry and pfSense logs |
+| Exfiltration | Execute a malicious EICAR test file to simulate damage | Splunk detects file creation and execution |
 
 ---
 
