@@ -379,6 +379,7 @@ Credential Access – Mimikatz Ingress and Command Execution Correlation
 <img width="3362" height="972" alt="Mimikatz alert triggered" src="https://github.com/user-attachments/assets/ec69b35d-c558-4540-b951-7d6d315dd3c5" />
 
 
+
 - Splunk detection
 
 LSASS memory dumping
