@@ -361,9 +361,11 @@ Access credentials stored in LSASS memory.
 ### Screenshots
 
 - LSASS dump
+  
   <img width="1020" height="1161" alt="EX 3" src="https://github.com/user-attachments/assets/4037d743-8b98-4184-a9ab-ff452746638f" />
 
 - Mimikatz execution
+  
   <img width="950" height="1010" alt="mimikatz dump 1" src="https://github.com/user-attachments/assets/a1695d50-acd4-43fc-9d36-f15922750932" />
 
 - Splunk alerts
@@ -375,6 +377,7 @@ Credential Access – LSASS Memory Dumping Behavior Detected
 Credential Access – Mimikatz Ingress and Command Execution Correlation
 
 <img width="3362" height="972" alt="Mimikatz alert triggered" src="https://github.com/user-attachments/assets/ec69b35d-c558-4540-b951-7d6d315dd3c5" />
+
 
 - Splunk detection
 
@@ -416,12 +419,15 @@ The EICAR test file was used as a safe substitute for a real malicious executabl
 ### Screenshots
 
 - Downloading the malware file on the windows system through the reverse shell
+  
   <img width="1898" height="1018" alt="9 downloading the malware file on the windows system" src="https://github.com/user-attachments/assets/0241f65b-507f-461d-9f26-b317724f1169" />
 
 - Splunk Alert
+  
   <img width="2316" height="1013" alt="13 Alert triggred there is malware" src="https://github.com/user-attachments/assets/46563d82-7e84-472b-94f8-351a3f203b75" />
 
 - Splunk Detection
+  
 <img width="3182" height="742" alt="10 the malware query" src="https://github.com/user-attachments/assets/ae175042-acea-4c2d-9690-177ab363f91e" />
 
 ---
