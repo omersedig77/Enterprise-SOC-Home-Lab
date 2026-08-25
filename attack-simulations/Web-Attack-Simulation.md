@@ -336,5 +336,3 @@ Web-attack-simulation/
 │
 └── ...
 ```
-
-That gives you a clean portfolio structure: the main README explains the overall SOC project, while each attack becomes a small case study with Attack → Telemetry → Detection → Investigation → Evidence.
