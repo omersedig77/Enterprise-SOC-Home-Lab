@@ -73,10 +73,11 @@ The objectives of these simulations are to:
 
 The following web attack simulations will be documented in this repository:
 
-Attack	Status	Detection
-Cross-Site Scripting (XSS)	🔄 In Progress	Splunk SPL
+#### Attack	Status	Detection
 
-SQL Injection	⏳ Planned	Splunk SPL
+- Cross-Site Scripting (XSS)	🔄 In Progress	Splunk SPL
+
+- SQL Injection	⏳ Planned	Splunk SPL
 
 Authentication Attacks	⏳ Planned	Splunk SPL
 
