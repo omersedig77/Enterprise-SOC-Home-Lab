@@ -69,27 +69,40 @@ The objectives of these simulations are to:
         Detection / Alert / Investigation
 ```
 
-Attack Categories
+### Attack Categories
 
 The following web attack simulations will be documented in this repository:
 
 Attack	Status	Detection
 Cross-Site Scripting (XSS)	🔄 In Progress	Splunk SPL
+
 SQL Injection	⏳ Planned	Splunk SPL
+
 Authentication Attacks	⏳ Planned	Splunk SPL
+
 Broken Access Control	⏳ Planned	Splunk SPL
+
 Security Misconfiguration	⏳ Planned	Splunk SPL
+
 Path Traversal	⏳ Planned	Splunk SPL
+
 Command Injection	⏳ Planned	Splunk SPL
+
 SSRF	⏳ Planned	Splunk SPL
+
 XXE	⏳ Planned	Splunk SPL
+
 File Upload Attacks	⏳ Planned	Splunk SPL
+
 JWT / Token Attacks	⏳ Planned	Splunk SPL
+
 Web Reconnaissance	⏳ Planned	Splunk SPL
+
 
 The attack list will be expanded as additional Juice Shop challenges are simulated and detected.
 
-Attack Simulation Workflow
+
+### Attack Simulation Workflow
 
 ```text
 
@@ -126,20 +139,19 @@ Alert / Investigation
 Evidence & Documentation
 ```
 
-Telemetry
+### Telemetry
 
 The primary telemetry sources used for the web attack simulations are:
 
-Nginx Access Logs
+- Nginx Access Logs
+- Nginx acts as the reverse proxy in front of Juice Shop and records HTTP requests.
 
-Nginx acts as the reverse proxy in front of Juice Shop and records HTTP requests.
-
-Example log location:
+#### Example log location:
 
 /var/log/nginx/juice-shop_access.log
 
 
-The logging configuration captures information such as:
+#### The logging configuration captures information such as:
 
 Source IP
 HTTP method
@@ -153,7 +165,7 @@ Juice Shop Container Logs
 
 Juice Shop application activity is also collected from the Docker container.
 
-Example:
+#### Example:
 
 sudo docker logs juice-shop
 
@@ -161,33 +173,33 @@ Splunk
 
 The Nginx logs are forwarded to Splunk using the Splunk Universal Forwarder.
 
-Example Splunk metadata:
+#### Example Splunk metadata:
 
 index=web
 host=ubuntu-web
 sourcetype=nginx:juice_shop:access
 
-Detection Methodology
+### Detection Methodology
 
 Detections are designed around observable attacker behavior rather than relying solely on known payloads.
 
 Detection logic may examine:
 
-Suspicious request parameters
-Encoded payloads
-Web attack keywords
-HTTP methods
-Request frequency
-HTTP response codes
-Source IP addresses
-User-Agent anomalies
-Repeated failed requests
-Suspicious URI paths
-Abnormal request patterns
+- Suspicious request parameters
+- Encoded payloads
+- Web attack keywords
+- HTTP methods
+- Request frequency
+- HTTP response codes
+- Source IP addresses
+- User-Agent anomalies
+- Repeated failed requests
+- Suspicious URI paths
+- Abnormal request patterns
 
 Where appropriate, URL-encoded values are decoded during analysis before detection.
 
-Attack Documentation Structure
+### Attack Documentation Structure
 
 Each attack will have its own directory containing the attack simulation and detection documentation.
 
@@ -210,24 +222,25 @@ Web-attack-simulation/
 └── ...
 ```
 
-Each attack README will document:
+#### Each attack README will document:
 
-Attack objective
-Lab target
-Attacker system
-Attack technique
-Attack command/request
-Attacker-side evidence
-Nginx/application telemetry
-Splunk search
-Detection logic
-Alert result
-Investigation notes
-MITRE ATT&CK mapping
-Lessons learned
-SOC Investigation Workflow
+- Attack objective
+- Lab target
+- Attacker system
+- Attack technique
+- Attack command/request
+- Attacker-side evidence
+- Nginx/application telemetry
+- Splunk search
+- Detection logic
+- Alert result
+- Investigation notes
+- MITRE ATT&CK mapping
+- Lessons learned
+- SOC Investigation Workflow
 
-For each simulated attack, the investigation follows a basic SOC L1 process:
+
+#### For each simulated attack, the investigation follows a basic SOC L1 process:
 ```text
 
 Alert
@@ -257,35 +270,36 @@ Determine Attack Technique
 Document Findings
 ```
 
-Attack Timeline
+### Attack Timeline
 
 As simulations are completed, the following table will track the overall exercise:
 
-Stage	Attack Activity	Detection	Status
-Reconnaissance	Web Reconnaissance	Splunk Detection	⏳
-Initial Access	XSS	XSS Detection	🔄
-Initial Access	SQL Injection	SQLi Detection	⏳
-Initial Access	Authentication Attack	Authentication Detection	⏳
-Exploitation	Command Injection	Command Injection Detection	⏳
-Exploitation	Path Traversal	Path Traversal Detection	⏳
-Post-Exploitation	Broken Access Control	Access Control Detection	⏳
-Skills Demonstrated
+- Stage	Attack Activity	Detection	Status
+- Reconnaissance	Web Reconnaissance	Splunk Detection	⏳
+- Initial Access	XSS	XSS Detection	🔄
+- Initial Access	SQL Injection	SQLi Detection	⏳
+- Initial Access	Authentication Attack	Authentication Detection	⏳
+- Exploitation	Command Injection	Command Injection Detection	⏳
+- Exploitation	Path Traversal	Path Traversal Detection	⏳
+- Post-Exploitation	Broken Access Control	Access Control Detection	⏳
+- Skills Demonstrated
 
-This project demonstrates practical SOC and detection engineering skills including:
+#### This project demonstrates practical SOC and detection engineering skills including:
 
-Web attack simulation
-OWASP Juice Shop
-Nginx log analysis
-Splunk log ingestion
-SPL development
-Detection engineering
-Alert investigation
-HTTP request analysis
-Attack pattern recognition
-MITRE ATT&CK mapping
-Security monitoring
-SOC L1 investigation methodology
-Disclaimer
+- Web attack simulation
+- OWASP Juice Shop
+- Nginx log analysis
+- Splunk log ingestion
+- SPL development
+- Detection engineering
+- Alert investigation
+- HTTP request analysis
+- Attack pattern recognition
+- MITRE ATT&CK mapping
+- Security monitoring
+- SOC L1 investigation methodology
+
+### Disclaimer
 
 This project is intended for educational and defensive security purposes.
 
@@ -294,7 +308,7 @@ All attacks are performed against intentionally vulnerable applications inside a
 Do not perform these techniques against systems or applications without explicit authorization.
 
 
-### Recommended GitHub structure
+### GitHub structure
 
 I would keep the parent README **this level of detail** and avoid putting individual XSS/SQLi commands into it.
 
