@@ -67,6 +67,7 @@ The objectives of these simulations are to:
                     │
                     ▼
         Detection / Alert / Investigation
+```
 
 Attack Categories
 
@@ -89,6 +90,8 @@ Web Reconnaissance	⏳ Planned	Splunk SPL
 The attack list will be expanded as additional Juice Shop challenges are simulated and detected.
 
 Attack Simulation Workflow
+
+```text
 
 Each attack follows a consistent SOC-oriented workflow:
 
@@ -121,6 +124,7 @@ Alert / Investigation
       │
       ▼
 Evidence & Documentation
+```
 
 Telemetry
 
@@ -188,6 +192,7 @@ Attack Documentation Structure
 Each attack will have its own directory containing the attack simulation and detection documentation.
 
 Example:
+```text
 
 Web-attack-simulation/
 │
@@ -203,7 +208,7 @@ Web-attack-simulation/
 │   └── README.md
 │
 └── ...
-
+```
 
 Each attack README will document:
 
@@ -223,6 +228,7 @@ Lessons learned
 SOC Investigation Workflow
 
 For each simulated attack, the investigation follows a basic SOC L1 process:
+```text
 
 Alert
   │
@@ -249,6 +255,7 @@ Determine Attack Technique
   │
   ▼
 Document Findings
+```
 
 Attack Timeline
 
@@ -314,6 +321,6 @@ Web-attack-simulation/
 │   └── screenshots/
 │
 └── ...
-
+```
 
 That gives you a clean portfolio structure: the main README explains the overall SOC project, while each attack becomes a small case study with Attack → Telemetry → Detection → Investigation → Evidence.
