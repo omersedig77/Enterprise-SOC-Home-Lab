@@ -79,25 +79,25 @@ The following web attack simulations will be documented in this repository:
 
 - SQL Injection	⏳ Planned	Splunk SPL
 
-Authentication Attacks	⏳ Planned	Splunk SPL
+  Authentication Attacks	⏳ Planned	Splunk SPL
 
-Broken Access Control	⏳ Planned	Splunk SPL
+- Broken Access Control	⏳ Planned	Splunk SPL
 
-Security Misconfiguration	⏳ Planned	Splunk SPL
+- Security Misconfiguration	⏳ Planned	Splunk SPL
 
-Path Traversal	⏳ Planned	Splunk SPL
+- Path Traversal	⏳ Planned	Splunk SPL
 
-Command Injection	⏳ Planned	Splunk SPL
+- Command Injection	⏳ Planned	Splunk SPL
 
-SSRF	⏳ Planned	Splunk SPL
+- SSRF	⏳ Planned	Splunk SPL
 
-XXE	⏳ Planned	Splunk SPL
+- XXE	⏳ Planned	Splunk SPL
 
-File Upload Attacks	⏳ Planned	Splunk SPL
+- File Upload Attacks	⏳ Planned	Splunk SPL
 
-JWT / Token Attacks	⏳ Planned	Splunk SPL
+- JWT / Token Attacks	⏳ Planned	Splunk SPL
 
-Web Reconnaissance	⏳ Planned	Splunk SPL
+- Web Reconnaissance	⏳ Planned	Splunk SPL
 
 
 The attack list will be expanded as additional Juice Shop challenges are simulated and detected.
