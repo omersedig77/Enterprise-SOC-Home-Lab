@@ -79,7 +79,7 @@ The following web attack simulations will be documented in this repository:
 
 - SQL Injection	⏳ Planned	Splunk SPL
 
-  Authentication Attacks	⏳ Planned	Splunk SPL
+- Authentication Attacks	⏳ Planned	Splunk SPL
 
 - Broken Access Control	⏳ Planned	Splunk SPL
 
