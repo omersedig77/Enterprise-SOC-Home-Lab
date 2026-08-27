@@ -76,9 +76,9 @@ The objectives of these simulations are to:
 
 | Attack Category | Target / Vector | Primary Detection Method | Status |
 |---|---|---|---|
-| Cross-Site Scripting (XSS) | DOM / Reflected Payload | Splunk SPL | 🔄 In Progress |
-| SQL Injection | Authentication / Search Parameters | Splunk SPL | 🔄 In Progress |
-| Brute Force Attack | Login Endpoint | Splunk SPL | 🔄 In Progress |
+| Cross-Site Scripting (XSS) | DOM / Reflected Payload | Splunk SPL | ✅ In Progress |
+| SQL Injection | Authentication / Search Parameters | Splunk SPL | ✅ In Progress |
+| Brute Force Attack | Login Endpoint | Splunk SPL | ✅ In Progress |
 
 
 # Attack Simulation Workflow
@@ -545,9 +545,9 @@ Detection logic is refined based on the observed attack telemetry.
 
 | Stage | Attack Activity | Detection Method | Status |
 |---|---|---|---|
-| Initial Access | Cross-Site Scripting (XSS) | Splunk SPL | 🔄 In Progress |
-| Initial Access | SQL Injection | Splunk SPL | 🔄 In Progress |
-| Credential Access | Brute Force Attack | Splunk SPL | 🔄 In Progress |
+| Initial Access | Cross-Site Scripting (XSS) | Splunk SPL | ✅ In Progress |
+| Initial Access | SQL Injection | Splunk SPL | ✅ In Progress |
+| Credential Access | Brute Force Attack | Splunk SPL | ✅ In Progress |
 
 
 # MITRE ATT&CK Mapping
@@ -599,48 +599,6 @@ Final Detection Rule
 
 ```
 
-# Evidence Structure
-
-Each attack can be documented using the following structure:
-
-```text
-
-attacks/
-├── xss/
-│   ├── README.md
-│   ├── screenshots/
-│   ├── spl/
-│   └── evidence/
-│
-├── sql-injection/
-│   ├── README.md
-│   ├── screenshots/
-│   ├── spl/
-│   └── evidence/
-│
-└── brute-force/
-    ├── README.md
-    ├── screenshots/
-    ├── spl/
-    └── evidence/
-```
-
-# Recommended evidence includes:
-
-Attack timestamp
-Source IP
-Destination IP
-Target endpoint
-HTTP request
-HTTP response code
-Relevant Nginx log entry
-Relevant Juice Shop log entry
-Splunk search
-Splunk detection result
-Alert screenshot
-Investigation notes
-Final detection status
-
 # Skills Demonstrated
 
 - Web Attack Simulation — OWASP Top 10
@@ -661,10 +619,10 @@ Final detection status
 | Nginx Reverse Proxy | ✅ Complete |
 | Juice Shop Deployment | ✅ Complete |
 | Splunk Log Ingestion | ✅ Complete |
-| XSS Simulation | 🔄 In Progress |
-| SQL Injection Simulation | 🔄 In Progress |
-| Brute Force Simulation | 🔄 In Progress |
-| SPL Detection Rules | 🔄 In Progress |
+| XSS Simulation | ✅ In Progress |
+| SQL Injection Simulation | ✅ In Progress |
+| Brute Force Simulation | ✅ In Progress |
+| SPL Detection Rules | ✅ In Progress |
 | SOC Investigation Documentation | 🔄 In Progress |
 
 
