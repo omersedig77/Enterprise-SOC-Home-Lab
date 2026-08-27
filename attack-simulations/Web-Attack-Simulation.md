@@ -402,9 +402,88 @@ index=web sourcetype="nginx:juice_shop:access"
 
 
 
+# Stage 3 – Brute Force / Credential Stuffing
 
+## Objective
 
+Simulate an automated password guessing attack against the OWASP Juice Shop authentication endpoint (`/rest/user/login`) using Burp Suite Intruder to identify valid user credentials and construct an aggregation-based Splunk SPL rule to detect brute force attempts and account breaches.
 
+---
+
+## Attack Execution
+
+An attacker intercepts a legitimate authentication request using Burp Suite Proxy and routes it to Burp Suite Intruder. A dictionary attack (Sniper mode) is executed against the `password` field for the target account `admin@juice-sh.op`.
+
+### Target Endpoint
+
+```http
+POST /rest/user/login HTTP/1.1
+```
+
+## Attack Vector & Tool
+
+### Tool: 
+Burp Suite Community Edition (Proxy & Intruder)
+
+### Vector: 
+Automated Credential Stuffing / Dictionary Attack
+
+### Target User: ```admin@juice-sh.op```
+
+## Result
+Burp Intruder transmitted multiple login attempts. The backend responded with HTTP 401 Unauthorized (status=401, response size 26 bytes) for invalid passwords, before returning an HTTP 200 OK (status=200, response size 784 bytes) upon discovering the valid credential (admin123).
+
+## Detection & Mapping
+
+- Triggered Detection
+- Alert: ```Brute Force Attack Detected - Account Breached```
+
+## MITRE ATT&CK Mapping
+
+- Tactic: ```Credential Access```
+
+- Technique: ```T1110.001 – Brute Force: Password Guessing```
+
+## Primary Telemetry Source
+
+- Log Path: ```/var/log/nginx/juice-shop_access.log```
+
+- Splunk Source: ```index=web sourcetype="nginx:juice_shop:access"```
+
+## Splunk Detection Engineering
+To differentiate routine login failures from automated password attacks, the SPL query extracts the source IP and targeted username, calculates total, failed (HTTP 401), and successful (HTTP 200) login counts over time, and flags high-volume failure spikes followed by a compromise.
+
+```bash
+index=web sourcetype="nginx:juice_shop:access" uri="/rest/user/login"
+| rex field=_raw "^(?<src_ip>[^\s]+)"
+| rex field=_raw "email.*?(?<target_user>[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})"
+| stats 
+    count as total_attempts,
+    count(eval(status=401)) as failed_attempts,
+    count(eval(status=200)) as successful_attempts,
+    values(target_user) as targeted_accounts,
+    earliest(_time) as attack_start,
+    latest(_time) as attack_end
+    by src_ip
+| where failed_attempts >= 5
+| eval 
+    attack_duration_seconds = attack_end - attack_start,
+    is_compromised = if(successful_attempts > 0, "⚠️ YES - Account Breached!", "❌ No - Blocked")
+| fieldformat attack_start = strftime(attack_start, "%Y-%m-%d %H:%M:%S")
+| fieldformat attack_end = strftime(attack_end, "%Y-%m-%d %H:%M:%S")
+```
+
+## Evidence & Screenshots
+
+- Intercepting Login Request via Burp Proxy:
+
+- Burp Intruder Payload Configuration:
+
+- Burp Intruder Attack Results (HTTP 401 vs HTTP 200):
+
+- Raw Nginx Access Logs in Splunk:
+
+- Splunk Aggregation & Breach Detection Alert:
 
 
 
