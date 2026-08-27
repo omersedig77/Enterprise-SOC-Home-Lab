@@ -235,6 +235,96 @@ Behavior-based detections can monitor:
                             Document Findings
 ```
 
+
+# Stage 1 – Cross-Site Scripting (XSS)
+
+## Objective
+
+Simulate a Reflected Cross-Site Scripting (XSS) attack targeting the OWASP Juice Shop search API to validate reverse proxy log collection and custom Splunk SPL detection rules.
+
+---
+
+## Attack Execution
+
+An attacker issues an HTTP `GET` request containing a URL-encoded JavaScript script tag targeting the product search query parameter (`q`).
+
+### Target Endpoint
+
+```http
+GET /rest/products/search?q=%3Cscript%3Ealert%27xss%27%29%3C%2Fscript%3E HTTP/1.1
+```
+
+##Attack Vector & Tool
+
+Tool: curl
+
+Vector: Injected Search Query Parameter (q)
+
+Command
+
+```bash
+curl -i "[http://192.168.50.30/rest/products/search?q=%3Cscript%3Ealert%27xss%27%29%3C%2Fscript%3E](http://192.168.50.30/rest/products/search?q=%3Cscript%3Ealert%27xss%27%29%3C%2Fscript%3E)"
+```
+
+## Result
+The target application processed the payload and returned an HTTP/1.1 500 Internal Server Error containing an unhandled application stack trace, confirming the input reached the backend processing engine.
+
+## Detection & Mapping
+
+Triggered Detection
+
+- Alert: ```Potential XSS Attempt ```
+
+## MITRE ATT&CK Mapping
+
+- Tactic: Initial Access / Execution
+
+- Technique: T1059.007 – Command and Scripting Interpreter: JavaScript
+
+## Primary Telemetry Source
+
+- Log Path: ```/var/log/nginx/juice-shop_access.log ```
+
+Splunk Source: ```index=web sourcetype="nginx:juice_shop:access" ```
+
+Splunk Detection Engineering
+Because web application payloads are frequently URL-encoded to evade static pattern matching, the SPL detection rule unmasks input string components using urldecode() before evaluating signature conditions.
+
+```bash
+index=web sourcetype="nginx:juice_shop:access"
+| eval decoded_query=urldecode(query_string)
+| where match(decoded_query, "(?i)<script>") 
+     OR match(decoded_query, "(?i)javascript:") 
+     OR match(decoded_query, "(?i)onerror=") 
+     OR match(decoded_query, "(?i)onload=") 
+     OR match(decoded_query, "(?i)onclick=")
+| eval detection="Potential XSS Attempt"
+| table _time detection clientip method uri_path decoded_query status useragent request_time
+| sort - _time
+```
+
+## Evidence & Screenshots
+
+- Attacker Command & Server Response:
+
+- Nginx Access Log Telemetry:
+
+- Splunk SIEM Detection Alert:
+
+```
+<ElicitationsGroup message="Ready for the next stage?">
+  <Elicitation label="Format Stage 2 – SQL Injection" query="Let's build Stage 2 – SQL Injection next."/>
+  <Elicitation label="Format Stage 3 – Brute Force Attack" query="Let's build Stage 3 – Brute Force Attack next."/>
+</ElicitationsGroup>
+```
+
+
+
+
+
+
+
+
 # Attack Investigation Process
 
 Each simulated attack follows a consistent investigation process.
