@@ -2,15 +2,13 @@
 
 ## Overview
 
-This repository documents web application attack simulations performed against **OWASP Juice Shop** within the SOC Homelab.
+This repository documents web application attack simulations performed against OWASP Juice Shop within the SOC Homelab.
 
-The objective is to simulate common web application attacks from a Kali Linux attacker system, collect the resulting telemetry through Nginx and application logs, and validate detection and investigation capabilities in Splunk.
+The objective is to simulate common web application attacks from a Kali Linux attacker system, collect the resulting telemetry through Nginx and OWASP Juice Shop logs, and validate detection and investigation capabilities in Splunk.
 
 All activities are performed within an isolated lab environment for educational, defensive, and detection engineering purposes.
 
----
-
-## Objectives
+# Objectives
 
 The objectives of these simulations are to:
 
@@ -25,315 +23,367 @@ The objectives of these simulations are to:
 
 ---
 
-## Lab Environment
+# Lab Systems
 
-| System | Role | IP Address |
-|---|---|---|
-| Kali Linux | Attacker | `192.168.50.40` |
-| Ubuntu Desktop | Web Attack Target / Juice Shop | `192.168.50.30` |
-| Splunk Enterprise | SIEM / Detection | `192.168.50.101` |
-| pfSense | Network Gateway | `192.168.50.1` |
-| OWASP Juice Shop | Vulnerable Web Application | `192.168.50.30:3000` |
+| System | Role | IP Address / Port |
+|--------|------|-------------------|
+| Kali Linux | Attacker | 192.168.50.40 |
+| Ubuntu Web Server | Target Host | 192.168.50.30 |
+| OWASP Juice Shop | Target Application | 192.168.50.30:3000 |
+| Splunk Enterprise | SIEM / Detection | 192.168.50.101 |
+| pfSense Firewall | Network Gateway | 192.168.50.1 |
 
-### Web Architecture
+---
+
+# Web Architecture
 
 ```text
-                    Web Attack Simulation
+                    Web Attack Simulation Architecture
 
-              Kali Linux
-             192.168.50.40
-                    │
-                    │ Web Attack
-                    ▼
-             Ubuntu Web Server
-             192.168.50.30
-                    │
-                    ▼
-                 Nginx
-                  :80
-                    │
-                    │ Reverse Proxy
-                    ▼
-             OWASP Juice Shop
-                  :3000
-                    │
-                    │ Logs
-                    ▼
-           Splunk Universal Forwarder
-                    │
-                    ▼
-            Splunk Enterprise
-             192.168.50.101
-                    │
-                    ▼
-        Detection / Alert / Investigation
+                     Kali Linux
+                   192.168.50.40
+                          │
+                          │ HTTP Attack
+                          ▼
+              Ubuntu Web Server
+                192.168.50.30
+                          │
+                          ▼
+                    Nginx :80
+                          │
+                          │ Reverse Proxy
+                          ▼
+              OWASP Juice Shop :3000
+                          │
+                          │ Application Logs
+                          ▼
+                 Log Collection
+                          │
+                          ▼
+              Splunk Universal Forwarder
+                          │
+                          ▼
+            Splunk Enterprise :192.168.50.101
+                          │
+                          ▼
+                Detection / Alerting
+                          │
+                          ▼
+                 SOC L1 Investigation
 ```
 
-### Attack Categories
+# Attack Categories
 
-The following web attack simulations will be documented in this repository:
-
-#### Attack	Status	Detection
-
-- Cross-Site Scripting (XSS)	🔄 In Progress	Splunk SPL
-
-- SQL Injection	⏳ Planned	Splunk SPL
-
-- Authentication Attacks	⏳ Planned	Splunk SPL
-
-- Broken Access Control	⏳ Planned	Splunk SPL
-
-- Security Misconfiguration	⏳ Planned	Splunk SPL
-
-- Path Traversal	⏳ Planned	Splunk SPL
-
-- Command Injection	⏳ Planned	Splunk SPL
-
-- SSRF	⏳ Planned	Splunk SPL
-
-- XXE	⏳ Planned	Splunk SPL
-
-- File Upload Attacks	⏳ Planned	Splunk SPL
-
-- JWT / Token Attacks	⏳ Planned	Splunk SPL
-
-- Web Reconnaissance	⏳ Planned	Splunk SPL
+| Attack Category | Target / Vector | Primary Detection Method | Status |
+|---|---|---|---|
+| Cross-Site Scripting (XSS) | DOM / Reflected Payload | Splunk SPL | 🔄 In Progress |
+| SQL Injection | Authentication / Search Parameters | Splunk SPL | 🔄 In Progress |
+| Brute Force Attack | Login Endpoint | Splunk SPL | 🔄 In Progress |
 
 
-The attack list will be expanded as additional Juice Shop challenges are simulated and detected.
-
-
-### Attack Simulation Workflow
+# Attack Simulation Workflow
 
 ```text
 
-Each attack follows a consistent SOC-oriented workflow:
+                         SOC Attack Simulation Workflow
 
-Attack Planning
-      │
-      ▼
-Attacker Simulation
-(Kali Linux)
-      │
-      ▼
-Web Request
-      │
-      ▼
-Nginx
-      │
-      ▼
-OWASP Juice Shop
-      │
-      ▼
-Log Generation
-      │
-      ▼
-Splunk Ingestion
-      │
-      ▼
-SPL Detection
-      │
-      ▼
-Alert / Investigation
-      │
-      ▼
-Evidence & Documentation
+                              Attack Planning
+                                    │
+                                    ▼
+                       Attacker Simulation
+                         Kali Linux Host
+                                    │
+                                    ▼
+                      HTTP Request Delivered
+                                    │
+                                    ▼
+                       Nginx Reverse Proxy
+                                    │
+                                    ▼
+                    OWASP Juice Shop Application
+                                    │
+                                    ▼
+                         Log Generation
+                                    │
+                                    ▼
+                         SIEM Ingestion
+                                    │
+                                    ▼
+                         Splunk SPL Detection
+                                    │
+                                    ▼
+                         SOC L1 Alert
+                                    │
+                                    ▼
+                         Investigation
+                                    │
+                                    ▼
+                       Evidence Collection
+                                    │
+                                    ▼
+                    Detection / Mitigation Rules
+
 ```
 
-### Telemetry
+# Telemetry Sources
 
 The primary telemetry sources used for the web attack simulations are:
 
-- Nginx Access Logs
-- Nginx acts as the reverse proxy in front of Juice Shop and records HTTP requests.
+## Nginx Access Logs
 
-#### Example log location:
+Nginx provides visibility into inbound HTTP traffic, including:
 
+- Source IP addresses
+- HTTP methods
+- Requested URIs
+- Query parameters
+- HTTP status codes
+- User-Agent strings
+- Request frequency
+- Response size
+
+### Example Log Location
+
+```bash
 /var/log/nginx/juice-shop_access.log
+```
 
+## OWASP Juice Shop Container Logs
 
-#### The logging configuration captures information such as:
+Application-level telemetry can be reviewed directly from the Juice Shop Docker container:
+
+```bash
+sudo docker logs juice-shop
+```
+
+These logs can provide additional context when investigating application behavior that may not be visible from the Nginx access logs alone.
+
+## Splunk Metadata
+
+Example Splunk search:
+
+```bash
+index=web host=ubuntu-web sourcetype=nginx:juice_shop:access
+```
+
+# Detection Methodology
+
+Detections are designed around observable attacker behavior rather than relying exclusively on static signatures.
+
+Parameter Analysis
+
+Identify suspicious HTTP request parameters and common web attack indicators, including:
+
+XSS-related payloads
+SQL injection syntax
+Authentication abuse
+Suspicious query parameters
+Encoded attack strings
+Decoding & Unmasking
+
+URL-encoded or otherwise obfuscated request parameters can be decoded within SPL before evaluating detection conditions.
+
+This helps identify payloads that would otherwise evade simple keyword matching.
+
+Behavioral Triggers
+
+Behavior-based detections can monitor:
+
+Abnormally high request rates
+Repeated authentication failures
+HTTP method anomalies
+Source IP request spikes
+High-volume HTTP 4xx responses
+High-volume HTTP 5xx responses
+Repeated requests against sensitive endpoints
+Suspicious request parameter patterns
+SOC L1 Investigation Workflow
+                           SOC L1 Investigation Flow
+
+                                  Alert
+                                    │
+                                    ▼
+                           Identify Source IP
+                                    │
+                                    ▼
+                            Identify Target
+                                    │
+                                    ▼
+                          Review HTTP Request
+                                    │
+                                    ▼
+                           Analyze Web Payload
+                                    │
+                                    ▼
+                          Check Response Code
+                                    │
+                                    ▼
+                         Correlate Telemetry
+                                    │
+                                    ▼
+                         Determine Attack Type
+                                    │
+                                    ▼
+                        Validate Detection Logic
+                                    │
+                                    ▼
+                           Document Findings
+
+Attack Investigation Process
+
+Each simulated attack follows a consistent investigation process.
+
+1. Attack Execution
+
+The attack is generated from the isolated Kali Linux attacker system.
+
+2. Traffic Observation
+
+Nginx records the HTTP request and associated metadata.
+
+3. Application Validation
+
+OWASP Juice Shop processes the request and generates application telemetry where applicable.
+
+4. SIEM Ingestion
+
+Relevant logs are forwarded to Splunk Enterprise.
+
+5. Detection
+
+Splunk SPL searches identify suspicious activity based on signatures and behavioral indicators.
+
+6. Investigation
+
+The SOC analyst reviews:
 
 Source IP
+Destination
+Requested URI
 HTTP method
-Request URI
-Query string
-HTTP status
+Query parameters
 User-Agent
-Referer
-Request time
-Juice Shop Container Logs
+Response code
+Request frequency
+Related events
+7. Evidence Collection
 
-Juice Shop application activity is also collected from the Docker container.
+Relevant logs, SPL searches, timestamps, and screenshots are documented as investigation evidence.
 
-#### Example:
+8. Detection Improvement
 
-sudo docker logs juice-shop
+Detection logic is refined based on the observed attack telemetry.
 
-Splunk
+Attack Timeline
+Stage	Attack Activity	Detection Method	Status
+Initial Access	Cross-Site Scripting (XSS)	Splunk SPL	🔄 In Progress
+Initial Access	SQL Injection	Splunk SPL	🔄 In Progress
+Credential Access	Brute Force Attack	Splunk SPL	🔄 In Progress
+MITRE ATT&CK Mapping
 
-The Nginx logs are forwarded to Splunk using the Splunk Universal Forwarder.
+Where applicable, simulated attack behaviors are mapped to relevant MITRE ATT&CK techniques.
 
-#### Example Splunk metadata:
+Attack	ATT&CK Mapping	Purpose
+XSS	Web/Application-based technique mapping	Analyze malicious web input
+SQL Injection	Web/Application-based technique mapping	Test application input validation
+Brute Force	Credential Access techniques	Test authentication abuse detection
 
-index=web
-host=ubuntu-web
-sourcetype=nginx:juice_shop:access
+Note: MITRE ATT&CK mappings should be finalized based on the exact behavior demonstrated during each simulation rather than assigning techniques solely from the attack name.
 
-### Detection Methodology
+Detection Development
 
-Detections are designed around observable attacker behavior rather than relying solely on known payloads.
+Each attack simulation follows a detection engineering lifecycle:
 
-Detection logic may examine:
+Attack Simulation
+       │
+       ▼
+Telemetry Collection
+       │
+       ▼
+Field Extraction / Parsing
+       │
+       ▼
+SPL Detection Development
+       │
+       ▼
+Detection Testing
+       │
+       ▼
+Alert Generation
+       │
+       ▼
+SOC Investigation
+       │
+       ▼
+Detection Tuning
+       │
+       ▼
+Final Detection Rule
 
-- Suspicious request parameters
-- Encoded payloads
-- Web attack keywords
-- HTTP methods
-- Request frequency
-- HTTP response codes
-- Source IP addresses
-- User-Agent anomalies
-- Repeated failed requests
-- Suspicious URI paths
-- Abnormal request patterns
+Evidence Structure
 
-Where appropriate, URL-encoded values are decoded during analysis before detection.
+Each attack can be documented using the following structure:
 
-### Attack Documentation Structure
-
-Each attack will have its own directory containing the attack simulation and detection documentation.
-
-Example:
-```text
-
-Web-attack-simulation/
-│
-├── README.md
-│
-├── XSS/
-│   └── README.md
-│
-├── SQL-Injection/
-│   └── README.md
-│
-├── Authentication/
-│   └── README.md
-│
-└── ...
-```
-
-#### Each attack README will document:
-
-- Attack objective
-- Lab target
-- Attacker system
-- Attack technique
-- Attack command/request
-- Attacker-side evidence
-- Nginx/application telemetry
-- Splunk search
-- Detection logic
-- Alert result
-- Investigation notes
-- MITRE ATT&CK mapping
-- Lessons learned
-- SOC Investigation Workflow
-
-
-#### For each simulated attack, the investigation follows a basic SOC L1 process:
-```text
-
-Alert
-  │
-  ▼
-Identify Source IP
-  │
-  ▼
-Identify Target
-  │
-  ▼
-Review HTTP Request
-  │
-  ▼
-Analyze Payload
-  │
-  ▼
-Check HTTP Response
-  │
-  ▼
-Review Related Events
-  │
-  ▼
-Determine Attack Technique
-  │
-  ▼
-Document Findings
-```
-
-### Attack Timeline
-
-As simulations are completed, the following table will track the overall exercise:
-
-- Stage	Attack Activity	Detection	Status
-- Reconnaissance	Web Reconnaissance	Splunk Detection	⏳
-- Initial Access	XSS	XSS Detection	🔄
-- Initial Access	SQL Injection	SQLi Detection	⏳
-- Initial Access	Authentication Attack	Authentication Detection	⏳
-- Exploitation	Command Injection	Command Injection Detection	⏳
-- Exploitation	Path Traversal	Path Traversal Detection	⏳
-- Post-Exploitation	Broken Access Control	Access Control Detection	⏳
-- Skills Demonstrated
-
-#### This project demonstrates practical SOC and detection engineering skills including:
-
-- Web attack simulation
-- OWASP Juice Shop
-- Nginx log analysis
-- Splunk log ingestion
-- SPL development
-- Detection engineering
-- Alert investigation
-- HTTP request analysis
-- Attack pattern recognition
-- MITRE ATT&CK mapping
-- Security monitoring
-- SOC L1 investigation methodology
-
-### Disclaimer
-
-This project is intended for educational and defensive security purposes.
-
-All attacks are performed against intentionally vulnerable applications inside an isolated SOC Homelab environment.
-
-Do not perform these techniques against systems or applications without explicit authorization.
-
-
-### GitHub structure
-
-I would keep the parent README **this level of detail** and avoid putting individual XSS/SQLi commands into it.
-
-Then:
-
-```text
-Web-attack-simulation/
-│
-├── README.md
-│
-├── XSS/
+attacks/
+├── xss/
 │   ├── README.md
-│   └── screenshots/
-│       ├── 01-attacker-xss.png
-│       ├── 02-nginx-log.png
-│       └── 03-splunk-detection.png
+│   ├── screenshots/
+│   ├── spl/
+│   └── evidence/
 │
-├── SQL-Injection/
+├── sql-injection/
 │   ├── README.md
-│   └── screenshots/
+│   ├── screenshots/
+│   ├── spl/
+│   └── evidence/
 │
-├── Authentication/
-│   ├── README.md
-│   └── screenshots/
-│
-└── ...
-```
+└── brute-force/
+    ├── README.md
+    ├── screenshots/
+    ├── spl/
+    └── evidence/
+
+
+Recommended evidence includes:
+
+Attack timestamp
+Source IP
+Destination IP
+Target endpoint
+HTTP request
+HTTP response code
+Relevant Nginx log entry
+Relevant Juice Shop log entry
+Splunk search
+Splunk detection result
+Alert screenshot
+Investigation notes
+Final detection status
+Skills Demonstrated
+Web Attack Simulation — OWASP Top 10
+Reverse Proxy Telemetry — Nginx access log structuring
+Docker Application Monitoring — Juice Shop container logging
+SIEM Ingestion — Splunk Universal Forwarder
+Splunk SPL Engineering — Detection and investigation queries
+SOC L1 Incident Response — Alert triage and investigation
+Detection Engineering — Behavioral and signature-based detections
+MITRE ATT&CK Mapping — Attack behavior classification
+Security Documentation — Evidence and investigation reporting
+Project Status
+Component	Status
+Lab Architecture	✅ Complete
+Nginx Reverse Proxy	✅ Complete
+Juice Shop Deployment	✅ Complete
+Splunk Log Ingestion	✅ Complete
+XSS Simulation	🔄 In Progress
+SQL Injection Simulation	🔄 In Progress
+Brute Force Simulation	🔄 In Progress
+SPL Detection Rules	🔄 In Progress
+SOC Investigation Documentation	🔄 In Progress
+Disclaimer
+
+This repository is maintained strictly for educational, research, and defensive security engineering purposes.
+
+All attack simulations are performed within an isolated, non-production SOC homelab against explicitly vulnerable targets.
+
+Do not reproduce these activities against systems, applications, networks, or infrastructure without explicit authorization.
