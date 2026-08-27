@@ -170,34 +170,39 @@ index=web host=ubuntu-web sourcetype=nginx:juice_shop:access
 
 Detections are designed around observable attacker behavior rather than relying exclusively on static signatures.
 
-Parameter Analysis
+## Parameter Analysis
 
 Identify suspicious HTTP request parameters and common web attack indicators, including:
 
-XSS-related payloads
-SQL injection syntax
-Authentication abuse
-Suspicious query parameters
-Encoded attack strings
-Decoding & Unmasking
+- XSS-related payloads
+- SQL injection syntax
+- Authentication abuse
+- Suspicious query parameters
+- Encoded attack strings
+
+## Decoding & Unmasking
 
 URL-encoded or otherwise obfuscated request parameters can be decoded within SPL before evaluating detection conditions.
 
 This helps identify payloads that would otherwise evade simple keyword matching.
 
-Behavioral Triggers
+## Behavioral Triggers
 
 Behavior-based detections can monitor:
 
-Abnormally high request rates
-Repeated authentication failures
-HTTP method anomalies
-Source IP request spikes
-High-volume HTTP 4xx responses
-High-volume HTTP 5xx responses
-Repeated requests against sensitive endpoints
-Suspicious request parameter patterns
-SOC L1 Investigation Workflow
+- Abnormally high request rates
+- Repeated authentication failures
+- HTTP method anomalies
+- Source IP request spikes
+- High-volume HTTP 4xx responses
+- High-volume HTTP 5xx responses
+- Repeated requests against sensitive endpoints
+- Suspicious request parameter patterns
+
+# SOC L1 Investigation Workflow
+
+```text
+
                            SOC L1 Investigation Flow
 
                                   Alert
@@ -228,71 +233,84 @@ SOC L1 Investigation Workflow
                                     │
                                     ▼
                            Document Findings
+```
 
-Attack Investigation Process
+# Attack Investigation Process
 
 Each simulated attack follows a consistent investigation process.
 
-1. Attack Execution
+### 1. Attack Execution
 
 The attack is generated from the isolated Kali Linux attacker system.
 
-2. Traffic Observation
+### 2. Traffic Observation
 
 Nginx records the HTTP request and associated metadata.
 
-3. Application Validation
+### 3. Application Validation
 
 OWASP Juice Shop processes the request and generates application telemetry where applicable.
 
-4. SIEM Ingestion
+### 4. SIEM Ingestion
 
 Relevant logs are forwarded to Splunk Enterprise.
 
-5. Detection
+### 5. Detection
 
 Splunk SPL searches identify suspicious activity based on signatures and behavioral indicators.
 
-6. Investigation
+### 6. Investigation
 
 The SOC analyst reviews:
 
-Source IP
-Destination
-Requested URI
-HTTP method
-Query parameters
-User-Agent
-Response code
-Request frequency
-Related events
-7. Evidence Collection
+- Source IP
+- Destination
+- Requested URI
+- HTTP method
+- Query parameters
+- User-Agent
+- Response code
+- Request frequency
+- Related events
+  
+### 7. Evidence Collection
 
 Relevant logs, SPL searches, timestamps, and screenshots are documented as investigation evidence.
 
-8. Detection Improvement
+### 8. Detection Improvement
 
 Detection logic is refined based on the observed attack telemetry.
 
-Attack Timeline
-Stage	Attack Activity	Detection Method	Status
-Initial Access	Cross-Site Scripting (XSS)	Splunk SPL	🔄 In Progress
-Initial Access	SQL Injection	Splunk SPL	🔄 In Progress
-Credential Access	Brute Force Attack	Splunk SPL	🔄 In Progress
-MITRE ATT&CK Mapping
+
+# Attack Timeline
+
+| Stage | Attack Activity | Detection Method | Status |
+|---|---|---|---|
+| Initial Access | Cross-Site Scripting (XSS) | Splunk SPL | 🔄 In Progress |
+| Initial Access | SQL Injection | Splunk SPL | 🔄 In Progress |
+| Credential Access | Brute Force Attack | Splunk SPL | 🔄 In Progress |
+
+
+# MITRE ATT&CK Mapping
 
 Where applicable, simulated attack behaviors are mapped to relevant MITRE ATT&CK techniques.
 
-Attack	ATT&CK Mapping	Purpose
-XSS	Web/Application-based technique mapping	Analyze malicious web input
-SQL Injection	Web/Application-based technique mapping	Test application input validation
-Brute Force	Credential Access techniques	Test authentication abuse detection
+# MITRE ATT&CK Mapping
 
-Note: MITRE ATT&CK mappings should be finalized based on the exact behavior demonstrated during each simulation rather than assigning techniques solely from the attack name.
+| Attack | ATT&CK Technique | Technique ID | Purpose |
+|---|---|---|---|
+| Cross-Site Scripting (XSS) | Exploitation for Client Execution | T1203 | Analyze malicious web input and client-side execution |
+| SQL Injection | Exploitation for Client Execution | T1203 | Test application input validation and exploitation behavior |
+| Brute Force Attack | Brute Force | T1110 | Test authentication abuse and repeated credential attempts |
 
-Detection Development
+> **Note:** MITRE ATT&CK mappings should be finalized based on the exact behavior demonstrated during each simulation rather than assigning techniques solely from the attack name.
+
+
+# Detection Development
 
 Each attack simulation follows a detection engineering lifecycle:
+
+```text
 
 Attack Simulation
        │
@@ -320,9 +338,13 @@ Detection Tuning
        ▼
 Final Detection Rule
 
-Evidence Structure
+```
+
+# Evidence Structure
 
 Each attack can be documented using the following structure:
+
+```text
 
 attacks/
 ├── xss/
@@ -342,9 +364,9 @@ attacks/
     ├── screenshots/
     ├── spl/
     └── evidence/
+```
 
-
-Recommended evidence includes:
+# Recommended evidence includes:
 
 Attack timestamp
 Source IP
@@ -359,28 +381,35 @@ Splunk detection result
 Alert screenshot
 Investigation notes
 Final detection status
-Skills Demonstrated
-Web Attack Simulation — OWASP Top 10
-Reverse Proxy Telemetry — Nginx access log structuring
-Docker Application Monitoring — Juice Shop container logging
-SIEM Ingestion — Splunk Universal Forwarder
-Splunk SPL Engineering — Detection and investigation queries
-SOC L1 Incident Response — Alert triage and investigation
-Detection Engineering — Behavioral and signature-based detections
-MITRE ATT&CK Mapping — Attack behavior classification
-Security Documentation — Evidence and investigation reporting
-Project Status
-Component	Status
-Lab Architecture	✅ Complete
-Nginx Reverse Proxy	✅ Complete
-Juice Shop Deployment	✅ Complete
-Splunk Log Ingestion	✅ Complete
-XSS Simulation	🔄 In Progress
-SQL Injection Simulation	🔄 In Progress
-Brute Force Simulation	🔄 In Progress
-SPL Detection Rules	🔄 In Progress
-SOC Investigation Documentation	🔄 In Progress
-Disclaimer
+
+# Skills Demonstrated
+
+- Web Attack Simulation — OWASP Top 10
+- Reverse Proxy Telemetry — Nginx access log structuring
+- Docker Application Monitoring — Juice Shop container logging
+- SIEM Ingestion — Splunk Universal Forwarder
+- Splunk SPL Engineering — Detection and investigation queries
+- SOC L1 Incident Response — Alert triage and investigation
+- Detection Engineering — Behavioral and signature-based detections
+- MITRE ATT&CK Mapping — Attack behavior classification
+- Security Documentation — Evidence and investigation reporting
+
+# Project Status
+
+| Component | Status |
+|---|---|
+| Lab Architecture | ✅ Complete |
+| Nginx Reverse Proxy | ✅ Complete |
+| Juice Shop Deployment | ✅ Complete |
+| Splunk Log Ingestion | ✅ Complete |
+| XSS Simulation | 🔄 In Progress |
+| SQL Injection Simulation | 🔄 In Progress |
+| Brute Force Simulation | 🔄 In Progress |
+| SPL Detection Rules | 🔄 In Progress |
+| SOC Investigation Documentation | 🔄 In Progress |
+
+
+# Disclaimer
 
 This repository is maintained strictly for educational, research, and defensive security engineering purposes.
 
