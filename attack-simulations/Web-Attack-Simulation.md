@@ -313,12 +313,12 @@ index=web sourcetype="nginx:juice_shop:access"
 
 - Splunk SIEM Detection Alert:
 
-```
+
 <ElicitationsGroup message="Ready for the next stage?">
   <Elicitation label="Format Stage 2 – SQL Injection" query="Let's build Stage 2 – SQL Injection next."/>
   <Elicitation label="Format Stage 3 – Brute Force Attack" query="Let's build Stage 3 – Brute Force Attack next."/>
 </ElicitationsGroup>
-```
+
 
 
 
