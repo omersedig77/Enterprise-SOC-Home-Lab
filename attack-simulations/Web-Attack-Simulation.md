@@ -289,7 +289,8 @@ Triggered Detection
 
 Splunk Source: ```index=web sourcetype="nginx:juice_shop:access" ```
 
-Splunk Detection Engineering
+## Splunk Detection Engineering
+
 Because web application payloads are frequently URL-encoded to evade static pattern matching, the SPL detection rule unmasks input string components using urldecode() before evaluating signature conditions.
 
 ```bash
@@ -318,6 +319,93 @@ index=web sourcetype="nginx:juice_shop:access"
   <Elicitation label="Format Stage 2 – SQL Injection" query="Let's build Stage 2 – SQL Injection next."/>
   <Elicitation label="Format Stage 3 – Brute Force Attack" query="Let's build Stage 3 – Brute Force Attack next."/>
 </ElicitationsGroup>
+
+
+
+# Stage 2 – SQL Injection (Authentication Bypass)
+
+## Objective
+
+Simulate a classic SQL Injection (SQLi) attack targeting the OWASP Juice Shop authentication endpoint (`/rest/user/login`) to bypass authentication mechanisms, gain administrative access, and validate Splunk SPL request-body decoding and detection capabilities.
+
+---
+
+## Attack Execution
+
+An attacker injects a SQL syntax payload into the application login form's `email` input field to force the backend database query to evaluate to `TRUE`.
+
+### Target Endpoint
+
+```http
+POST /rest/user/login HTTP/1.1
+```
+
+## Attack Vector & Payload
+
+### Vector:
+Injected Login Input Parameter (email)
+
+### Payload: 
+``` admin' OR '1'='1'-- ```
+
+### URL-Encoded Payload Body: 
+
+```email=admin%27%20OR%20%271%27%3D%271%27--&password=test```
+
+## Result
+The database executed the manipulated query, returning a 200 OK HTTP status and authenticating the attacker as admin@juice-sh.op without requiring a valid password.
+
+## Detection & Mapping
+
+- Triggered Detection
+- Alert: ```SQL Injection Attempt Detected```
+
+## MITRE ATT&CK Mapping
+
+- Tactic: ```Initial Access / Credential Access```
+
+- Technique: ```T1190 – Exploit Public-Facing Application```
+
+## Primary Telemetry Source
+
+- Log Path: ```/var/log/nginx/juice-shop_access.log```
+
+- Splunk Source: ```index=web sourcetype="nginx:juice_shop:access"```
+
+## Splunk Detection Engineering
+
+Because attackers transmit malicious SQL payloads inside URL-encoded HTTP POST request bodies, the detection pipeline extracts the raw request_body, decodes the string using urldecode(), and checks for standard SQL injection signatures (admin', ' OR '1'='1').
+
+```bash
+index=web sourcetype="nginx:juice_shop:access"
+| rex field=_raw "^(?<clientip>\S+)\s+\[[^\]]+\]\s+\"(?<method>[^\s]+)\s+(?<uri>[^\s]+).*:request_body=\"(?<request_body>[^\"]*)\""
+| where match(request_body, "admin%27") OR match(request_body, "%27%20OR%20%27")
+| eval decoded = urldecode(request_body)
+| eval Time = strftime(_time, "%Y-%m-%d %H:%M:%S")
+| table Time, clientip, method, uri, status, request_body, decoded, _raw
+| sort - Time
+| rename clientip as "Source IP", request_body as "URL Encoded Payload", decoded as "Decoded SQL Injection", _raw as "Raw Log"
+```
+
+## Evidence & Screenshots
+
+- SQL Injection Payload Submission:
+
+- Successful Authentication Bypass (Logged in as Admin):
+
+- Splunk SIEM Detection & Payload Extraction:
+
+
+<ElicitationsGroup message="Ready for the next stage?">
+  <Elicitation label="Format Stage 3 – Brute Force / Credential Stuffing" query="Let's build Stage 3 – Brute Force Attack next."/>
+</ElicitationsGroup>
+
+
+
+
+
+
+
 
 
 
