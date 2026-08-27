@@ -45,19 +45,19 @@ The objectives of these simulations are to:
                           │
                           │ HTTP Attack
                           ▼
-              Ubuntu Web Server
-                192.168.50.30
+                  Ubuntu Web Server
+                    192.168.50.30
                           │
                           ▼
-                    Nginx :80
+                      Nginx :80
                           │
                           │ Reverse Proxy
                           ▼
-              OWASP Juice Shop :3000
+                OWASP Juice Shop :3000
                           │
                           │ Application Logs
                           ▼
-                 Log Collection
+                    Log Collection
                           │
                           ▼
               Splunk Universal Forwarder
@@ -90,38 +90,38 @@ The objectives of these simulations are to:
                               Attack Planning
                                     │
                                     ▼
-                       Attacker Simulation
-                         Kali Linux Host
+                           Attacker Simulation
+                             Kali Linux Host
                                     │
                                     ▼
-                      HTTP Request Delivered
+                          HTTP Request Delivered
                                     │
                                     ▼
-                       Nginx Reverse Proxy
+                           Nginx Reverse Proxy
                                     │
                                     ▼
-                    OWASP Juice Shop Application
+                       OWASP Juice Shop Application
                                     │
                                     ▼
-                         Log Generation
+                             Log Generation
                                     │
                                     ▼
-                         SIEM Ingestion
+                             SIEM Ingestion
                                     │
                                     ▼
-                         Splunk SPL Detection
+                           Splunk SPL Detection
                                     │
                                     ▼
-                         SOC L1 Alert
+                              SOC L1 Alert
                                     │
                                     ▼
-                         Investigation
+                               Investigation
                                     │
                                     ▼
-                       Evidence Collection
+                           Evidence Collection
                                     │
                                     ▼
-                    Detection / Mitigation Rules
+                       Detection / Mitigation Rules
 
 ```
 
@@ -208,31 +208,31 @@ Behavior-based detections can monitor:
                                   Alert
                                     │
                                     ▼
-                           Identify Source IP
+                            Identify Source IP
                                     │
                                     ▼
-                            Identify Target
+                             Identify Target
                                     │
                                     ▼
-                          Review HTTP Request
+                           Review HTTP Request
                                     │
                                     ▼
                            Analyze Web Payload
                                     │
                                     ▼
-                          Check Response Code
+                           Check Response Code
                                     │
                                     ▼
-                         Correlate Telemetry
+                          Correlate Telemetry
                                     │
                                     ▼
-                         Determine Attack Type
+                          Determine Attack Type
                                     │
                                     ▼
-                        Validate Detection Logic
+                         Validate Detection Logic
                                     │
                                     ▼
-                           Document Findings
+                            Document Findings
 ```
 
 # Attack Investigation Process
