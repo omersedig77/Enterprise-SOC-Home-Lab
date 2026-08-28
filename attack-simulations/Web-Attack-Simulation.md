@@ -76,10 +76,10 @@ The objectives of these simulations are to:
 
 | Attack Category | Target / Vector | Primary Detection Method | Status |
 |---|---|---|---|
-| Cross-Site Scripting (XSS) | DOM / Reflected Payload | Splunk SPL | ✅ In Progress |
-| SQL Injection | Authentication / Search Parameters | Splunk SPL | ✅ In Progress |
-| Brute Force Attack | Login Endpoint | Splunk SPL | ✅ In Progress |
-| Denial of Service (DoS) | Application / Volumetric HTTP Flood | Splunk SPL | ✅ In Progress |
+| Cross-Site Scripting (XSS) | DOM / Reflected Payload | Splunk SPL | ✅ Done |
+| SQL Injection | Authentication / Search Parameters | Splunk SPL | ✅ Done |
+| Brute Force Attack | Login Endpoint | Splunk SPL | ✅ Done |
+| Denial of Service (DoS) | Application / Volumetric HTTP Flood | Splunk SPL | ✅ Done |
 
 
 # Attack Simulation Workflow
@@ -658,9 +658,10 @@ Detection logic is refined based on the observed attack telemetry.
 
 | Stage | Attack Activity | Detection Method | Status |
 |---|---|---|---|
-| Initial Access | Cross-Site Scripting (XSS) | Splunk SPL | ✅ In Progress |
-| Initial Access | SQL Injection | Splunk SPL | ✅ In Progress |
-| Credential Access | Brute Force Attack | Splunk SPL | ✅ In Progress |
+| Initial Access | Cross-Site Scripting (XSS) | Splunk SPL | ✅ Done |
+| Initial Access | SQL Injection | Splunk SPL | ✅ Done |
+| Credential Access | Brute Force Attack | Splunk SPL | ✅ Done |
+| Impact | Application DoS (HTTP Flood) | Splunk SPL | ✅ Done |
 
 
 # MITRE ATT&CK Mapping
@@ -674,6 +675,7 @@ Where applicable, simulated attack behaviors are mapped to relevant MITRE ATT&CK
 | Cross-Site Scripting (XSS) | Exploitation for Client Execution | T1203 | Analyze malicious web input and client-side execution |
 | SQL Injection | Exploitation for Client Execution | T1203 | Test application input validation and exploitation behavior |
 | Brute Force Attack | Brute Force | T1110 | Test authentication abuse and repeated credential attempts |
+| Denial of Service (DoS) | Endpoint Denial of Service | T1499 | Detect volumetric resource exhaustion and anomalous request spikes |
 
 > **Note:** MITRE ATT&CK mappings should be finalized based on the exact behavior demonstrated during each simulation rather than assigning techniques solely from the attack name.
 
@@ -732,10 +734,11 @@ Final Detection Rule
 | Nginx Reverse Proxy | ✅ Complete |
 | Juice Shop Deployment | ✅ Complete |
 | Splunk Log Ingestion | ✅ Complete |
-| XSS Simulation | ✅ In Progress |
-| SQL Injection Simulation | ✅ In Progress |
-| Brute Force Simulation | ✅ In Progress |
-| SPL Detection Rules | ✅ In Progress |
+| XSS Simulation | ✅ Complete |
+| SQL Injection Simulation | ✅ Complete |
+| Brute Force Simulation | ✅ Complete |
+| Denial of Service (DoS) Simulation | ✅ Complete |
+| SPL Detection Rules | 🔄 In Progress |
 | SOC Investigation Documentation | 🔄 In Progress |
 
 
