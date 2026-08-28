@@ -256,11 +256,9 @@ GET /rest/products/search?q=%3Cscript%3Ealert%27xss%27%29%3C%2Fscript%3E HTTP/1.
 
 ## Attack Vector & Tool
 
-### Tool: 
-curl
+- Tool: ```curl```
 
-### Vector: 
-Injected Search Query Parameter (q)
+- Vector: ```Injected Search Query Parameter (q)```
 
 ### Command
 
@@ -279,9 +277,9 @@ Triggered Detection
 
 ## MITRE ATT&CK Mapping
 
-- Tactic: Initial Access / Execution
+- Tactic: ```Initial Access / Execution```
 
-- Technique: T1059.007 – Command and Scripting Interpreter: JavaScript
+- Technique: ```T1059.007 – Command and Scripting Interpreter: JavaScript```
 
 ## Primary Telemetry Source
 
@@ -342,11 +340,9 @@ POST /rest/user/login HTTP/1.1
 
 ## Attack Vector & Payload
 
-### Vector:
-Injected Login Input Parameter (email)
+- Vector: ```Injected Login Input Parameter (email)```
 
-### Payload: 
-``` admin' OR '1'='1'-- ```
+- Payload: ``` admin' OR '1'='1'-- ```
 
 ### URL-Encoded Payload Body: 
 
@@ -422,13 +418,12 @@ POST /rest/user/login HTTP/1.1
 
 ## Attack Vector & Tool
 
-### Tool: 
-Burp Suite Community Edition (Proxy & Intruder)
+- Tool: ```Burp Suite Community Edition (Proxy & Intruder)```
 
-### Vector: 
-Automated Credential Stuffing / Dictionary Attack
+- Vector: ```Automated Credential Stuffing / Dictionary Attack```
 
-### Target User: ```admin@juice-sh.op```
+### Target User:
+```admin@juice-sh.op```
 
 ## Result
 Burp Intruder transmitted multiple login attempts. The backend responded with HTTP 401 Unauthorized (status=401, response size 26 bytes) for invalid passwords, before returning an HTTP 200 OK (status=200, response size 784 bytes) upon discovering the valid credential (admin123).
