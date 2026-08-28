@@ -529,7 +529,7 @@ ApacheBench issued 10,000 requests to http://192.168.50.30/ at a rate of 233.40 
 
 ## MITRE ATT&CK Mapping
 
-- Tactic: Impact
+- Tactic: ```Impact```
 
 - Technique: ```T1499 – Endpoint Denial of Service```
 
