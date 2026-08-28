@@ -486,6 +486,123 @@ index=web sourcetype="nginx:juice_shop:access" uri="/rest/user/login"
 - Splunk Aggregation & Breach Detection Alert:
 
 
+# Stage 4 – Application Layer Denial of Service (DoS)
+
+## Objective
+
+Simulate an application-layer volumetric Denial of Service (HTTP Flood) against the target web application using ApacheBench (`ab`) to identify traffic anomaly signatures and construct time-bucketed aggregation rules in Splunk to detect high-frequency request floods.
+
+---
+
+## Attack Execution
+
+An attacker performs initial network reconnaissance using `nmap` to discover open services on target `192.168.50.30`. After identifying HTTP services running on ports 80 and 3000, an HTTP volumetric flood is generated using ApacheBench (`ab`) from attacker IP `192.168.50.40` to stress the endpoint.
+
+### Target Endpoint
+
+```http
+GET / HTTP/1.0
+Host: 192.168.50.30
+```
+
+Attack Vector & Tool
+
+- Reconnaissance Tool: ```Nmap (nmap -sT -p- 192.168.50.30, nmap -sV -p 3000,80 192.168.50.30)```
+
+- Stress Tool: ```ApacheBench (ab via apache2-utils)```
+
+- Vector: ```Application Layer HTTP Flood (GET Request Flooding)```
+
+- Parameters: ```-n 10000 (Total Requests), -c 100 (Concurrent Connections)```
+
+- Target Host: ```192.168.50.30```
+
+- Attacker IP: ```192.168.50.40```
+
+## Result
+ApacheBench issued 10,000 requests to http://192.168.50.30/ at a rate of 233.40 requests per second across 100 concurrent threads. Telemetry captured a peak rate of 9,506 requests per minute originating from 192.168.50.40.
+
+## Detection & Mapping
+
+- Triggered Detection
+- Alert: ```High-Volume HTTP Flood / Application DoS Activity Detected```
+
+## MITRE ATT&CK Mapping
+
+- Tactic: Impact
+
+- Technique: ```T1499 – Endpoint Denial of Service```
+
+## Primary Telemetry Source
+
+- Log Path: ```/var/log/nginx/juice-shop_access.log```
+
+- Splunk Source: ```index=web sourcetype="nginx:juice_shop:access"```
+
+## Splunk Detection Engineering
+
+To detect HTTP volumetric denial of service attacks, the SPL query extracts the origin IP address, groups request traffic into 1-minute time buckets, calculates total request volume per minute, and flags source IPs exceeding 1,000 requests/min.
+
+```bash
+index=web sourcetype="nginx:juice_shop:access"
+| rex field=_raw "^(?<src_ip>[^\s]+)"
+| bucket _time span=1m
+| stats count as requests_per_minute by _time, src_ip
+| where requests_per_minute > 1000
+| sort - requests_per_minute
+```
+
+To summarize flood parameters and capture specific benchmarking user agents (e.g., ApacheBench):
+
+```bash
+index=web sourcetype="nginx:juice_shop:access" user_agent="*ApacheBench*"
+| rex field=_raw "^(?<src_ip>[^\s]+)"
+| stats 
+    count as total_floods, 
+    min(_time) as start_time, 
+    max(_time) as end_time 
+    by src_ip, user_agent
+| fieldformat start_time = strftime(start_time, "%Y-%m-%d %H:%M:%S")
+| fieldformat end_time = strftime(end_time, "%Y-%m-%d %H:%M:%S")
+```
+
+To visualize volumetric spikes over 10-second intervals:
+
+```bash
+index=web sourcetype="nginx:juice_shop:access"
+| rex field=_raw "^(?<src_ip>[^\s]+)"
+| timechart span=10s count by src_ip
+```
+
+## Evidence & Screenshots
+
+- Port Reconnaissance via Nmap:
+
+- Nmap Service Version Detection:
+
+- Installing Benchmarking Tools (apache2-utils):
+
+- Executing ApacheBench HTTP Flood:
+
+- Raw Nginx Access Logs in Splunk:
+
+- Splunk Threshold Aggregation Query Result:
+
+- Splunk User-Agent Attack Summary:
+
+- Splunk Volumetric Spike Visualization (Area Chart):
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
