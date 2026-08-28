@@ -79,6 +79,7 @@ The objectives of these simulations are to:
 | Cross-Site Scripting (XSS) | DOM / Reflected Payload | Splunk SPL | ✅ In Progress |
 | SQL Injection | Authentication / Search Parameters | Splunk SPL | ✅ In Progress |
 | Brute Force Attack | Login Endpoint | Splunk SPL | ✅ In Progress |
+| Denial of Service (DoS) | Application / Volumetric HTTP Flood | Splunk SPL | ✅ In Progress |
 
 
 # Attack Simulation Workflow
