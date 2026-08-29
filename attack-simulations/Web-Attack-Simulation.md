@@ -391,7 +391,7 @@ index=web sourcetype="nginx:juice_shop:access"
 
 
 - Successful Authentication Bypass (Logged in as Admin):
-  <img width="1715" height="1387" alt="2" src="https://github.com/user-attachments/assets/cb34df72-e895-404e-8382-5fe8d2b95eb1" />
+<img width="1715" height="1211" alt="2" src="https://github.com/user-attachments/assets/20714531-2ce9-47bd-a353-f8a745c1c879" />
 
 
 - Splunk SIEM Detection & Payload Extraction:
