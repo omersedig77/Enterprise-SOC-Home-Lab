@@ -387,7 +387,7 @@ index=web sourcetype="nginx:juice_shop:access"
 ## Evidence & Screenshots
 
 - SQL Injection Payload Submission:
-  <img width="1712" height="1386" alt="1" src="https://github.com/user-attachments/assets/18c3fcb1-6080-4caf-83cd-00a7ac052db4" />
+<img width="1712" height="925" alt="1" src="https://github.com/user-attachments/assets/9c776634-c767-4ea7-b767-9d91b2c992b9" />
 
 
 - Successful Authentication Bypass (Logged in as Admin):
