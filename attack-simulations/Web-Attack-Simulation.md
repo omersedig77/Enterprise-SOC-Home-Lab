@@ -592,22 +592,34 @@ index=web sourcetype="nginx:juice_shop:access"
 ## Evidence & Screenshots
 
 - Port Reconnaissance via Nmap:
+  <img width="1708" height="861" alt="1 h" src="https://github.com/user-attachments/assets/0c612a83-a281-4c54-819b-ded8f5a5083b" />
+
 
 - Nmap Service Version Detection:
+  <img width="1706" height="797" alt="2 h" src="https://github.com/user-attachments/assets/846a27ff-6451-46d7-8af1-c3ed5c513553" />
+
 
 - Installing Benchmarking Tools (apache2-utils):
+  <img width="3432" height="1438" alt="3" src="https://github.com/user-attachments/assets/c3c320ba-2643-41f1-9ed9-66fa894f9347" />
+
 
 - Executing ApacheBench HTTP Flood:
+  <img width="1707" height="1382" alt="4" src="https://github.com/user-attachments/assets/40855bf4-dd14-464e-a4d6-5c9c71e8d0de" />
+
 
 - Raw Nginx Access Logs in Splunk:
+  <img width="1647" height="1305" alt="12" src="https://github.com/user-attachments/assets/b5b55f48-db0e-45ad-a5aa-e46a55808ffa" />
+
 
 - Splunk Threshold Aggregation Query Result:
+  <img width="1718" height="1388" alt="8" src="https://github.com/user-attachments/assets/dcd40d39-ccd5-498e-b31b-57345f13a4a9" />
 
-- Splunk User-Agent Attack Summary:
 
 - Splunk Volumetric Spike Visualization (Area Chart):
 
+<img width="3437" height="736" alt="10" src="https://github.com/user-attachments/assets/682a77ea-4723-403b-8ba1-aab1b470360f" />
 
+<img width="1717" height="1388" alt="11" src="https://github.com/user-attachments/assets/f3568e3d-179b-44fa-87d8-2036b5a3f8c1" />
 
 
 
