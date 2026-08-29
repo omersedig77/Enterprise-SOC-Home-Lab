@@ -479,14 +479,26 @@ index=web sourcetype="nginx:juice_shop:access" uri="/rest/user/login"
 ## Evidence & Screenshots
 
 - Intercepting Login Request via Burp Proxy:
+  <img width="3432" height="1438" alt="4" src="https://github.com/user-attachments/assets/8a9a934c-c6ae-4dff-9d61-15a654c98e5e" />
+
 
 - Burp Intruder Payload Configuration:
+  <img width="3437" height="1438" alt="5 h" src="https://github.com/user-attachments/assets/e8fbfa5b-aa27-4c40-b621-06598886bb00" />
+<img width="3438" height="1438" alt="6 h" src="https://github.com/user-attachments/assets/2b36de9c-2ff5-46ee-bd3f-e912886234bb" />
+
 
 - Burp Intruder Attack Results (HTTP 401 vs HTTP 200):
+  <img width="3435" height="1438" alt="7" src="https://github.com/user-attachments/assets/573a7d57-8b42-4f54-8621-9dfea82e1d2e" />
+<img width="1843" height="1381" alt="8 new h" src="https://github.com/user-attachments/assets/eb6658d0-c3be-4f8d-bbde-e3ff074733bc" />
+<img width="3432" height="1438" alt="9 new h" src="https://github.com/user-attachments/assets/68875bd0-8870-4349-9cec-759813518e99" />
+
 
 - Raw Nginx Access Logs in Splunk:
+  <img width="1911" height="965" alt="8 h" src="https://github.com/user-attachments/assets/03035bcf-7f2a-4a25-b216-8ecd14b9d093" />
+
 
 - Splunk Aggregation & Breach Detection Alert:
+<img width="1908" height="957" alt="9" src="https://github.com/user-attachments/assets/94d227fa-6ba5-4a65-a153-e76e6b0264d9" />
 
 
 # Stage 4 – Application Layer Denial of Service (DoS)
