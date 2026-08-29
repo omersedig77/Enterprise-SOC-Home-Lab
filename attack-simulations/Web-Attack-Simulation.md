@@ -387,15 +387,16 @@ index=web sourcetype="nginx:juice_shop:access"
 ## Evidence & Screenshots
 
 - SQL Injection Payload Submission:
-<img width="1712" height="925" alt="1" src="https://github.com/user-attachments/assets/9c776634-c767-4ea7-b767-9d91b2c992b9" />
+<img width="1712" height="925" alt="1 h" src="https://github.com/user-attachments/assets/c3f3a1b0-285b-4003-ac71-b86faa489ca7" />
 
 
 - Successful Authentication Bypass (Logged in as Admin):
-<img width="1715" height="1211" alt="2" src="https://github.com/user-attachments/assets/20714531-2ce9-47bd-a353-f8a745c1c879" />
+<img width="1715" height="1211" alt="2 h" src="https://github.com/user-attachments/assets/333d3b26-1477-47d6-ae22-b7524dfa54b8" />
 
 
 - Splunk SIEM Detection & Payload Extraction:
-<img width="1915" height="1078" alt="3" src="https://github.com/user-attachments/assets/ff11230b-a0bc-4c1f-b056-687e6c9c1c9a" />
+  <img width="1915" height="1078" alt="3" src="https://github.com/user-attachments/assets/c3cd47a9-310b-4c66-bff0-8e6cc170d0bc" />
+
 <img width="1917" height="1078" alt="Screenshot 2026-08-25 204301" src="https://github.com/user-attachments/assets/c8964e9c-ae34-4b29-b42e-3870e327b71a" />
 
 
