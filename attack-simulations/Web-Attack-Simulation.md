@@ -397,7 +397,7 @@ index=web sourcetype="nginx:juice_shop:access"
 - Splunk SIEM Detection & Payload Extraction:
   <img width="1915" height="1078" alt="3" src="https://github.com/user-attachments/assets/c3cd47a9-310b-4c66-bff0-8e6cc170d0bc" />
 
-<img width="1917" height="1078" alt="Screenshot 2026-08-25 204301" src="https://github.com/user-attachments/assets/c8964e9c-ae34-4b29-b42e-3870e327b71a" />
+<img width="1917" height="1078" alt="4 h" src="https://github.com/user-attachments/assets/3b9e703e-4ec4-4233-a938-63a7859b0d06" />
 
 
 <ElicitationsGroup message="Ready for the next stage?">
