@@ -3,7 +3,7 @@
 
 The following diagram illustrates the overall SOC homelab architecture, including the network topology, monitored endpoints, centralized SIEM deployment, firewall, and adversary simulation host.
 
-![SOC Homelab Architecture](../diagrams/soc-homelab-architecture.png)
+<img width="8872" height="6218" alt="Home Lab Arch drawio" src="https://github.com/user-attachments/assets/be549ac6-f90c-4a32-a4f7-b7614b538317" />
 
 
 ## Overview
