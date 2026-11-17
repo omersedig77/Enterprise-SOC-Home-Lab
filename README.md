@@ -10,6 +10,11 @@ The primary objective of this project is not only to deploy a SIEM solution, but
 
 ---
 
+## 🏗️ Lab Architecture Diagram
+![Uploading Home Lab Arch.drawio.png…]()
+
+---
+
 ## 🎯 Project Objectives
 
 * **Architecture & Deployment:** Design and deploy a functional SOC home lab using Splunk Enterprise.
