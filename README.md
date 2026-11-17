@@ -11,7 +11,8 @@ The primary objective of this project is not only to deploy a SIEM solution, but
 ---
 
 ## 🏗️ Lab Architecture Diagram
-![Uploading Home Lab Arch.drawio.png…]()
+
+<img width="8872" height="6218" alt="Home Lab Arch drawio" src="https://github.com/user-attachments/assets/b5dc6e2e-a1c7-4126-be31-0666d244a868" />
 
 ---
 
